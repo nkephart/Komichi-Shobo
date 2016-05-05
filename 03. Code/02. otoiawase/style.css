@@ -33,7 +33,7 @@ header {
   width: 100%;
   height: 119px;
   background: url(css/img/otoiawase/header.gif) 0 0 no-repeat;
-  border-top: solid 8px rgb(6,39,94);
+  border-top: solid 4px rgb(6,39,94);
 }
 h1 {
   margin: 0;

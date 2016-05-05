@@ -1,0 +1,298 @@
+@charset "UTF-8";
+/* line 5, ../sass/partials/_03_structure.scss */
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 9, ../sass/partials/_03_structure.scss */
+html, body {
+  margin: 0;
+}
+
+/* line 13, ../sass/partials/_03_structure.scss */
+article {
+  width: 1050px;
+  margin: 0 auto;
+  padding: 0;
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* line 20, ../sass/partials/_03_structure.scss */
+a, form, li, p, span, td, ul, h4, h5, input, textarea, footer {
+  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro W3", Osaka, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS P Gothic", sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  color: #575757;
+}
+
+/* line 27, ../sass/partials/_03_structure.scss */
+a {
+  padding: 5px 0;
+  text-decoration: none;
+}
+
+/* line 34, ../sass/partials/_03_structure.scss */
+td {
+  background-clip: padding-box !important;
+}
+
+/* line 40, ../sass/partials/_03_structure.scss */
+header {
+  overflow: hidden;
+  position: relative;
+  padding: 0 55px;
+  width: 100%;
+}
+/* line 45, ../sass/partials/_03_structure.scss */
+header h1 {
+  float: left;
+  margin: 21px 0;
+}
+/* line 48, ../sass/partials/_03_structure.scss */
+header h1 a {
+  display: block;
+  height: 72px;
+  width: 254px;
+  color: transparent;
+  background: url("css/img/top/logo.gif") 0 0 no-repeat;
+}
+/* line 56, ../sass/partials/_03_structure.scss */
+header nav {
+  float: right;
+  position: absolute;
+  bottom: 21px;
+  right: 55px;
+  text-align: center;
+}
+/* line 62, ../sass/partials/_03_structure.scss */
+header nav ol {
+  margin: 0;
+  padding: 0;
+}
+/* line 66, ../sass/partials/_03_structure.scss */
+header nav li {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+}
+/* line 68, ../sass/partials/_03_structure.scss */
+header nav li:last-child {
+  margin: 0;
+}
+/* line 72, ../sass/partials/_03_structure.scss */
+header nav a {
+  display: block;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+/* line 79, ../sass/partials/_03_structure.scss */
+.nav-news {
+  height: 30px;
+  width: 100px;
+  background: url("css/img/top/gnavi01_off.gif") 0 0 no-repeat;
+}
+/* line 83, ../sass/partials/_03_structure.scss */
+.nav-news:hover {
+  background: url("css/img/top/gnavi01_on.gif") 0 0 no-repeat;
+}
+
+/* line 88, ../sass/partials/_03_structure.scss */
+.nav-books {
+  height: 30px;
+  width: 109px;
+  background: url("css/img/top/gnavi02_off.gif") 0 0 no-repeat;
+}
+/* line 92, ../sass/partials/_03_structure.scss */
+.nav-books:hover {
+  background: url("css/img/top/gnavi02_on.gif") 0 0 no-repeat;
+}
+
+/* line 97, ../sass/partials/_03_structure.scss */
+.nav-bs {
+  height: 30px;
+  width: 110px;
+  background: url("css/img/top/gnavi03_off.gif") 0 0 no-repeat;
+}
+/* line 101, ../sass/partials/_03_structure.scss */
+.nav-bs:hover {
+  background: url("css/img/top/gnavi03_on.gif") 0 0 no-repeat;
+}
+
+/* line 106, ../sass/partials/_03_structure.scss */
+.nav-order {
+  height: 30px;
+  width: 165px;
+  background: url("css/img/top/gnavi04_off.gif") 0 0 no-repeat;
+}
+/* line 110, ../sass/partials/_03_structure.scss */
+.nav-order:hover {
+  background: url("css/img/top/gnavi04_on.gif") 0 0 no-repeat;
+}
+
+/* line 115, ../sass/partials/_03_structure.scss */
+.nav-company {
+  height: 30px;
+  width: 107px;
+  background: url("css/img/top/gnavi05_off.gif") 0 0 no-repeat;
+}
+/* line 119, ../sass/partials/_03_structure.scss */
+.nav-company:hover {
+  background: url("css/img/top/gnavi05_on.gif") 0 0 no-repeat;
+}
+
+/* line 124, ../sass/partials/_03_structure.scss */
+.section-wrapper {
+  padding: 0 55px;
+}
+
+/* line 128, ../sass/partials/_03_structure.scss */
+.metaslider {
+  margin-bottom: 34px;
+}
+
+/* line 134, ../sass/partials/_03_structure.scss */
+.banner-wrapper {
+  width: 100%;
+  margin: 0 0 34px;
+  padding: 0;
+  text-align: center;
+}
+/* line 139, ../sass/partials/_03_structure.scss */
+.banner-wrapper li {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+}
+/* line 141, ../sass/partials/_03_structure.scss */
+.banner-wrapper li:first-child {
+  margin-right: 55px;
+}
+/* line 145, ../sass/partials/_03_structure.scss */
+.banner-wrapper a {
+  display: block;
+  height: 75px;
+  width: 280px;
+}
+
+/* line 152, ../sass/partials/_03_structure.scss */
+.top-banner-1 {
+  background: url("css/img/top/banner01.gif") 0 0 no-repeat;
+}
+
+/* line 156, ../sass/partials/_03_structure.scss */
+.top-banner-2 {
+  background: url("css/img/top/banner02.gif") 0 0 no-repeat;
+}
+
+/* line 162, ../sass/partials/_03_structure.scss */
+h2 {
+  text-align: center;
+}
+/* line 164, ../sass/partials/_03_structure.scss */
+h2 a {
+  height: 55px;
+  width: 220px;
+  color: transparent;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+}
+
+/* line 173, ../sass/partials/_03_structure.scss */
+.books h2 a {
+  background: url("css/img/top/txt_books.gif") 0 0 no-repeat;
+}
+
+/* line 179, ../sass/partials/_03_structure.scss */
+.editorial h2 a {
+  background: url("css/img/top/txt_hensyubu.gif") 0 0 no-repeat;
+}
+
+/* line 185, ../sass/partials/_03_structure.scss */
+.news h2 a {
+  background: url("css/img/top/txt_news.gif") 0 0 no-repeat;
+}
+
+/* line 192, ../sass/partials/_03_structure.scss */
+.global-footer {
+  width: 100%;
+  padding: 55px 0 0;
+  background: #eee;
+}
+
+/* line 198, ../sass/partials/_03_structure.scss */
+.footer-navigation {
+  position: relative;
+  width: 100%;
+  margin: 0 0 34px;
+  padding: 0 55px;
+}
+/* line 203, ../sass/partials/_03_structure.scss */
+.footer-navigation ol {
+  float: left;
+  height: 13em;
+  width: 25%;
+  margin: 0;
+  padding: 0 0 0 34px;
+  list-style: none;
+}
+
+/* line 213, ../sass/partials/_03_structure.scss */
+.footer-banner-1 {
+  background: url("css/img/top/banner_custom.gif") 0 0 no-repeat;
+}
+
+/* line 217, ../sass/partials/_03_structure.scss */
+.footer-banner-2 {
+  background: url("css/img/top/banner_water.gif") 0 0 no-repeat;
+}
+
+/* line 221, ../sass/partials/_03_structure.scss */
+.footer-company-info {
+  float: right;
+  height: 13em;
+  width: 50%;
+  padding: 0 0 0 34px;
+}
+/* line 227, ../sass/partials/_03_structure.scss */
+.footer-company-info span:first-child {
+  font-size: 21px;
+}
+
+/* line 233, ../sass/partials/_03_structure.scss */
+.footer-copyright {
+  width: 100%;
+  padding: 13px 55px;
+  background: #aaa;
+}
+/* line 237, ../sass/partials/_03_structure.scss */
+.footer-copyright span {
+  color: #fff;
+}
+
+/* line 3, ../sass/partials/_05_gvariables.scss */
+.align-l {
+  text-align: left;
+}
+
+/* line 7, ../sass/partials/_05_gvariables.scss */
+.highlight {
+  color: #8b4513;
+}
+
+/* line 11, ../sass/partials/_05_gvariables.scss */
+.cf {
+  overflow: hidden;
+  *zoom: 1;
+}

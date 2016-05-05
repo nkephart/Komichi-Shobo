@@ -1,0 +1,240 @@
+// Structure partial
+// As a general rule, margins should be set in wrappers while
+// paddings go in the elements inside the wrapper
+
+*, *:before, *:after {
+  @include box-sizing(border-box);
+}
+
+html, body {
+  margin: 0;
+}
+
+article {
+  width: 1050px;
+  margin: 0 auto;
+  padding: 0;
+  box-shadow: 0 0 10px 5px  rgba(0,0,0,0.2);
+}
+
+a, form, li, p, span, td, ul, h4, h5, input, textarea, footer {
+  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro W3", Osaka, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS P Gothic", sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  color: rgb(87,87,87);
+}
+
+a {
+  padding: 5px 0;
+  text-decoration: none;
+  &:hover {
+  }
+}
+
+td {
+  background-clip: padding-box !important;
+}
+
+// Global header
+
+header {
+  overflow: hidden;
+  position: relative;
+  padding: 0 55px;
+  width: 100%;
+  h1 {
+    float: left;
+    margin: 21px 0;
+    a {
+      display: block;
+      height: 72px;
+      width: 254px;
+      color: transparent;
+      background: url("css/img/top/logo.gif") 0 0 no-repeat;
+    }
+  }
+  nav {
+    float: right;
+    position: absolute;
+    bottom: 21px;
+    right: 55px;
+    text-align: center;
+    ol {
+      margin: 0;
+      padding: 0;
+    }
+    li {
+      @include inline-block;
+      &:last-child {
+        margin: 0;
+      }
+    }
+    a {
+      display: block;
+      @include transition(all 0.3s ease-in-out);
+    }
+  } 
+}
+
+.nav-news {
+  height: 30px;
+  width: 100px;
+  background: url("css/img/top/gnavi01_off.gif") 0 0 no-repeat;
+  &:hover {
+    background: url("css/img/top/gnavi01_on.gif") 0 0 no-repeat;
+  }
+}
+
+.nav-books {
+  height: 30px;
+  width: 109px;
+  background: url("css/img/top/gnavi02_off.gif") 0 0 no-repeat;
+  &:hover {
+    background: url("css/img/top/gnavi02_on.gif") 0 0 no-repeat;
+  }
+}
+
+.nav-bs {
+  height: 30px;
+  width: 110px;
+  background: url("css/img/top/gnavi03_off.gif") 0 0 no-repeat;
+  &:hover {
+    background: url("css/img/top/gnavi03_on.gif") 0 0 no-repeat;
+  }
+}
+
+.nav-order {
+  height: 30px;
+  width: 165px;
+  background: url("css/img/top/gnavi04_off.gif") 0 0 no-repeat;
+  &:hover {
+    background: url("css/img/top/gnavi04_on.gif") 0 0 no-repeat;
+  }
+}
+
+.nav-company {
+  height: 30px;
+  width: 107px;
+  background: url("css/img/top/gnavi05_off.gif") 0 0 no-repeat;
+  &:hover {
+    background: url("css/img/top/gnavi05_on.gif") 0 0 no-repeat;
+  }
+}
+
+.section-wrapper {
+  padding: 0 55px;
+}
+
+.metaslider {
+  margin-bottom: 34px;
+}
+
+// Banner
+
+.banner-wrapper {
+  width: 100%;
+  margin: 0 0 34px;
+  padding: 0;
+  text-align: center;
+  li {
+    @include inline-block;
+    &:first-child {
+      margin-right: 55px;
+    }
+  }
+  a {
+    display: block;
+    height: 75px;
+    width: 280px;
+  }
+}
+
+.top-banner-1 {
+  background: url("css/img/top/banner01.gif") 0 0 no-repeat;
+}
+
+.top-banner-2 {
+    background: url("css/img/top/banner02.gif") 0 0 no-repeat;
+}
+
+// Contents
+
+h2 {
+  text-align: center;
+  a {
+    height: 55px;
+    width: 220px;
+    color: transparent;
+    @include inline-block;
+  }
+}
+
+.books {
+  h2 a {
+    background: url("css/img/top/txt_books.gif") 0 0 no-repeat;
+  }
+}
+
+.editorial {
+  h2 a {
+    background: url("css/img/top/txt_hensyubu.gif") 0 0 no-repeat;
+  }
+}
+
+.news {
+  h2 a {
+    background: url("css/img/top/txt_news.gif") 0 0 no-repeat;
+  }
+}
+
+// Global footer
+
+.global-footer {
+  width: 100%;
+  padding: 55px 0 0;
+  background: #eee;
+}
+
+.footer-navigation {
+  position: relative;
+  width: 100%;
+  margin: 0 0 34px;
+  padding: 0 55px;
+  ol {
+    float: left;
+    height: 13em;
+    width: 25%;
+    margin: 0;
+    padding: 0 0 0 34px;
+    list-style: none;
+  }
+}
+
+.footer-banner-1 {
+  background: url("css/img/top/banner_custom.gif") 0 0 no-repeat;
+}
+
+.footer-banner-2 {
+  background: url("css/img/top/banner_water.gif") 0 0 no-repeat;
+}
+
+.footer-company-info {
+  float: right;
+  height: 13em;
+  width: 50%;
+  padding: 0 0 0 34px;
+  span {
+    &:first-child {
+      font-size: 21px; 
+    }
+  }
+}
+
+.footer-copyright {
+  width: 100%;
+  padding: 13px 55px;
+  background: #aaa;
+  span {
+    color: #fff;
+  }
+}
