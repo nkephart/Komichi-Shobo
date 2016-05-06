@@ -1,7 +1,7 @@
 // Typography partial
 
 %text-base {
-  font-weight: 400; 
+  font-weight: 300; 
   font-style: normal;
   text-decoration: none;
   text-rendering: optimizeLegibility;
@@ -11,60 +11,26 @@
 
 %text-serif {
   @extend %text-base;
-  font-family: "ヒラギノ明朝 Pro W6", "Hiragino Mincho Pro", "HGS明朝E", "ＭＳ Ｐ明朝", "times new roman", serif; 
+  font-family: "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "HGS明朝E", "ＭＳ Ｐ明朝", "times new roman", serif; 
 }
 
 %text-sans-serif {
   @extend %text-base;
-  font-family: "arial", sans-serif;
+  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro W3", Osaka, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS P Gothic", sans-serif;
 }
 
-a, form, li, p, span, table, ul, h4, h5 {
+a, form, li, p, span, td, ul, h4, h5, input, textarea, footer {
   @extend %text-sans-serif;
-  font-size: 15px;
-}
-
-h1 {
-  @extend %text-serif;
-  font-size: 21px;
-  visibility: hidden;
-  a {
-    @extend h1;
-    visibility: visible;
-  }
-}
-
-h2 {
-  @extend %text-serif;
-  font-size: 34px;
-  a {
-    @extend h2;
-  }
+  font-size: 14px;
+  color: #333
 }
 
 h3 {
-  @extend %text-serif;
-  font-size: 21px;
-  a {
-    @extend h3;
-  }
-}
-
-input, textarea {
-  @extend %text-serif;
-  font-size: 13px;
-}
-
-button {
   @extend %text-sans-serif;
-  font-size: 13px;
+  font-size: 16px;
+  color: #333
 }
 
-.pagination ul li {
+.text-serif {
   @extend %text-serif;
-//  font-size: 13px;
-  a {
-    @extend %text-serif;
-    font-size: inherit;
-  }
 }

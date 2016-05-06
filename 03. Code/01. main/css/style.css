@@ -1,4 +1,35 @@
 @charset "UTF-8";
+/* line 3, ../sass/partials/_02_typography.scss */
+.text-serif, a, form, li, p, span, td, ul, h4, h5, input, textarea, footer, h3 {
+  font-weight: 300;
+  font-style: normal;
+  text-decoration: none;
+  text-rendering: optimizeLegibility;
+  line-height: 1.615;
+}
+
+/* line 12, ../sass/partials/_02_typography.scss */
+.text-serif {
+  font-family: "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "HGS明朝E", "ＭＳ Ｐ明朝", "times new roman", serif;
+}
+
+/* line 17, ../sass/partials/_02_typography.scss */
+a, form, li, p, span, td, ul, h4, h5, input, textarea, footer, h3 {
+  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro W3", Osaka, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS P Gothic", sans-serif;
+}
+
+/* line 22, ../sass/partials/_02_typography.scss */
+a, form, li, p, span, td, ul, h4, h5, input, textarea, footer {
+  font-size: 14px;
+  color: #333;
+}
+
+/* line 28, ../sass/partials/_02_typography.scss */
+h3 {
+  font-size: 16px;
+  color: #333;
+}
+
 /* line 5, ../sass/partials/_03_structure.scss */
 *, *:before, *:after {
   -moz-box-sizing: border-box;
@@ -20,37 +51,29 @@ article {
 }
 
 /* line 20, ../sass/partials/_03_structure.scss */
-a, form, li, p, span, td, ul, h4, h5, input, textarea, footer {
-  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro W3", Osaka, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS P Gothic", sans-serif;
-  font-size: 15px;
-  font-weight: 300;
-  color: #575757;
-}
-
-/* line 27, ../sass/partials/_03_structure.scss */
 a {
   padding: 5px 0;
   text-decoration: none;
 }
 
-/* line 34, ../sass/partials/_03_structure.scss */
+/* line 27, ../sass/partials/_03_structure.scss */
 td {
   background-clip: padding-box !important;
 }
 
-/* line 40, ../sass/partials/_03_structure.scss */
+/* line 33, ../sass/partials/_03_structure.scss */
 header {
   overflow: hidden;
   position: relative;
   padding: 0 55px;
   width: 100%;
 }
-/* line 45, ../sass/partials/_03_structure.scss */
+/* line 38, ../sass/partials/_03_structure.scss */
 header h1 {
   float: left;
   margin: 21px 0;
 }
-/* line 48, ../sass/partials/_03_structure.scss */
+/* line 41, ../sass/partials/_03_structure.scss */
 header h1 a {
   display: block;
   height: 72px;
@@ -58,7 +81,7 @@ header h1 a {
   color: transparent;
   background: url("css/img/top/logo.gif") 0 0 no-repeat;
 }
-/* line 56, ../sass/partials/_03_structure.scss */
+/* line 49, ../sass/partials/_03_structure.scss */
 header nav {
   float: right;
   position: absolute;
@@ -66,12 +89,12 @@ header nav {
   right: 55px;
   text-align: center;
 }
-/* line 62, ../sass/partials/_03_structure.scss */
+/* line 55, ../sass/partials/_03_structure.scss */
 header nav ol {
   margin: 0;
   padding: 0;
 }
-/* line 66, ../sass/partials/_03_structure.scss */
+/* line 59, ../sass/partials/_03_structure.scss */
 header nav li {
   display: inline-block;
   vertical-align: middle;
@@ -79,11 +102,11 @@ header nav li {
   *zoom: 1;
   *display: inline;
 }
-/* line 68, ../sass/partials/_03_structure.scss */
+/* line 61, ../sass/partials/_03_structure.scss */
 header nav li:last-child {
   margin: 0;
 }
-/* line 72, ../sass/partials/_03_structure.scss */
+/* line 65, ../sass/partials/_03_structure.scss */
 header nav a {
   display: block;
   -moz-transition: all 0.3s ease-in-out;
@@ -92,79 +115,79 @@ header nav a {
   transition: all 0.3s ease-in-out;
 }
 
-/* line 79, ../sass/partials/_03_structure.scss */
+/* line 72, ../sass/partials/_03_structure.scss */
 .nav-news {
   height: 30px;
   width: 100px;
   background: url("css/img/top/gnavi01_off.gif") 0 0 no-repeat;
 }
-/* line 83, ../sass/partials/_03_structure.scss */
+/* line 76, ../sass/partials/_03_structure.scss */
 .nav-news:hover {
   background: url("css/img/top/gnavi01_on.gif") 0 0 no-repeat;
 }
 
-/* line 88, ../sass/partials/_03_structure.scss */
+/* line 81, ../sass/partials/_03_structure.scss */
 .nav-books {
   height: 30px;
   width: 109px;
   background: url("css/img/top/gnavi02_off.gif") 0 0 no-repeat;
 }
-/* line 92, ../sass/partials/_03_structure.scss */
+/* line 85, ../sass/partials/_03_structure.scss */
 .nav-books:hover {
   background: url("css/img/top/gnavi02_on.gif") 0 0 no-repeat;
 }
 
-/* line 97, ../sass/partials/_03_structure.scss */
+/* line 90, ../sass/partials/_03_structure.scss */
 .nav-bs {
   height: 30px;
   width: 110px;
   background: url("css/img/top/gnavi03_off.gif") 0 0 no-repeat;
 }
-/* line 101, ../sass/partials/_03_structure.scss */
+/* line 94, ../sass/partials/_03_structure.scss */
 .nav-bs:hover {
   background: url("css/img/top/gnavi03_on.gif") 0 0 no-repeat;
 }
 
-/* line 106, ../sass/partials/_03_structure.scss */
+/* line 99, ../sass/partials/_03_structure.scss */
 .nav-order {
   height: 30px;
   width: 165px;
   background: url("css/img/top/gnavi04_off.gif") 0 0 no-repeat;
 }
-/* line 110, ../sass/partials/_03_structure.scss */
+/* line 103, ../sass/partials/_03_structure.scss */
 .nav-order:hover {
   background: url("css/img/top/gnavi04_on.gif") 0 0 no-repeat;
 }
 
-/* line 115, ../sass/partials/_03_structure.scss */
+/* line 108, ../sass/partials/_03_structure.scss */
 .nav-company {
   height: 30px;
   width: 107px;
   background: url("css/img/top/gnavi05_off.gif") 0 0 no-repeat;
 }
-/* line 119, ../sass/partials/_03_structure.scss */
+/* line 112, ../sass/partials/_03_structure.scss */
 .nav-company:hover {
   background: url("css/img/top/gnavi05_on.gif") 0 0 no-repeat;
 }
 
-/* line 124, ../sass/partials/_03_structure.scss */
+/* line 117, ../sass/partials/_03_structure.scss */
 .section-wrapper {
   padding: 0 55px;
 }
 
-/* line 128, ../sass/partials/_03_structure.scss */
+/* line 121, ../sass/partials/_03_structure.scss */
 .metaslider {
   margin-bottom: 34px;
 }
 
-/* line 134, ../sass/partials/_03_structure.scss */
+/* line 127, ../sass/partials/_03_structure.scss */
 .banner-wrapper {
   width: 100%;
-  margin: 0 0 34px;
+  margin: 0 0 55px;
   padding: 0;
   text-align: center;
 }
-/* line 139, ../sass/partials/_03_structure.scss */
+/* line 132, ../sass/partials/_03_structure.scss */
 .banner-wrapper li {
   display: inline-block;
   vertical-align: middle;
@@ -172,73 +195,134 @@ header nav a {
   *zoom: 1;
   *display: inline;
 }
-/* line 141, ../sass/partials/_03_structure.scss */
+/* line 134, ../sass/partials/_03_structure.scss */
 .banner-wrapper li:first-child {
   margin-right: 55px;
 }
-/* line 145, ../sass/partials/_03_structure.scss */
+/* line 138, ../sass/partials/_03_structure.scss */
 .banner-wrapper a {
   display: block;
   height: 75px;
   width: 280px;
 }
 
-/* line 152, ../sass/partials/_03_structure.scss */
+/* line 145, ../sass/partials/_03_structure.scss */
 .top-banner-1 {
   background: url("css/img/top/banner01.gif") 0 0 no-repeat;
 }
 
-/* line 156, ../sass/partials/_03_structure.scss */
+/* line 149, ../sass/partials/_03_structure.scss */
 .top-banner-2 {
   background: url("css/img/top/banner02.gif") 0 0 no-repeat;
 }
 
-/* line 162, ../sass/partials/_03_structure.scss */
-h2 {
-  text-align: center;
-}
-/* line 164, ../sass/partials/_03_structure.scss */
-h2 a {
+/* line 155, ../sass/partials/_03_structure.scss */
+.books h2, .editorial h2, .news h2 {
   height: 55px;
   width: 220px;
+  margin: 0 auto 34px;
+  text-align: center;
   color: transparent;
-  display: inline-block;
-  vertical-align: middle;
-  *vertical-align: auto;
-  *zoom: 1;
-  *display: inline;
 }
 
-/* line 173, ../sass/partials/_03_structure.scss */
-.books h2 a {
+/* line 164, ../sass/partials/_03_structure.scss */
+.books h2 {
   background: url("css/img/top/txt_books.gif") 0 0 no-repeat;
 }
 
-/* line 179, ../sass/partials/_03_structure.scss */
-.editorial h2 a {
-  background: url("css/img/top/txt_hensyubu.gif") 0 0 no-repeat;
+/* line 170, ../sass/partials/_03_structure.scss */
+.new-books {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+/* line 174, ../sass/partials/_03_structure.scss */
+.new-books li {
+  float: left;
+  width: 215px;
+  margin: 0 49px 55px;
+}
+/* line 178, ../sass/partials/_03_structure.scss */
+.new-books li img {
+  max-height: 200px;
+  max-width: 215px;
 }
 
 /* line 185, ../sass/partials/_03_structure.scss */
-.news h2 a {
-  background: url("css/img/top/txt_news.gif") 0 0 no-repeat;
+.editorial {
+  margin-bottom: 55px;
+}
+/* line 187, ../sass/partials/_03_structure.scss */
+.editorial h2 {
+  background: url("css/img/top/txt_hensyubu.gif") 0 0 no-repeat;
+}
+/* line 191, ../sass/partials/_03_structure.scss */
+.editorial div {
+  overflow: hidden;
+  width: 940px;
+  margin: 0 auto;
+  padding: 0 13px;
+  border: solid 1px #333;
+}
+/* line 197, ../sass/partials/_03_structure.scss */
+.editorial div span {
+  display: block;
+  text-align: right;
 }
 
-/* line 192, ../sass/partials/_03_structure.scss */
+/* line 204, ../sass/partials/_03_structure.scss */
+.news {
+  margin-bottom: 55px;
+}
+/* line 206, ../sass/partials/_03_structure.scss */
+.news h2 {
+  background: url("css/img/top/txt_news.gif") 0 0 no-repeat;
+}
+/* line 210, ../sass/partials/_03_structure.scss */
+.news ul {
+  margin: 0;
+  padding: 0;
+}
+/* line 214, ../sass/partials/_03_structure.scss */
+.news ul > li {
+  float: left;
+  overflow: hidden;
+  height: 300px;
+  width: 442.5px;
+  padding: 0 13px;
+  border: solid 1px #333;
+}
+/* line 221, ../sass/partials/_03_structure.scss */
+.news ul > li:first-child {
+  margin-right: 55px;
+}
+/* line 225, ../sass/partials/_03_structure.scss */
+.news ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/* line 230, ../sass/partials/_03_structure.scss */
+.news span {
+  display: block;
+  text-align: right;
+}
+
+/* line 238, ../sass/partials/_03_structure.scss */
 .global-footer {
   width: 100%;
   padding: 55px 0 0;
   background: #eee;
 }
 
-/* line 198, ../sass/partials/_03_structure.scss */
+/* line 244, ../sass/partials/_03_structure.scss */
 .footer-navigation {
   position: relative;
   width: 100%;
   margin: 0 0 34px;
   padding: 0 55px;
 }
-/* line 203, ../sass/partials/_03_structure.scss */
+/* line 249, ../sass/partials/_03_structure.scss */
 .footer-navigation ol {
   float: left;
   height: 13em;
@@ -248,35 +332,35 @@ h2 a {
   list-style: none;
 }
 
-/* line 213, ../sass/partials/_03_structure.scss */
+/* line 259, ../sass/partials/_03_structure.scss */
 .footer-banner-1 {
   background: url("css/img/top/banner_custom.gif") 0 0 no-repeat;
 }
 
-/* line 217, ../sass/partials/_03_structure.scss */
+/* line 263, ../sass/partials/_03_structure.scss */
 .footer-banner-2 {
   background: url("css/img/top/banner_water.gif") 0 0 no-repeat;
 }
 
-/* line 221, ../sass/partials/_03_structure.scss */
+/* line 267, ../sass/partials/_03_structure.scss */
 .footer-company-info {
   float: right;
   height: 13em;
   width: 50%;
   padding: 0 0 0 34px;
 }
-/* line 227, ../sass/partials/_03_structure.scss */
+/* line 273, ../sass/partials/_03_structure.scss */
 .footer-company-info span:first-child {
   font-size: 21px;
 }
 
-/* line 233, ../sass/partials/_03_structure.scss */
+/* line 279, ../sass/partials/_03_structure.scss */
 .footer-copyright {
   width: 100%;
   padding: 13px 55px;
   background: #aaa;
 }
-/* line 237, ../sass/partials/_03_structure.scss */
+/* line 283, ../sass/partials/_03_structure.scss */
 .footer-copyright span {
   color: #fff;
 }
