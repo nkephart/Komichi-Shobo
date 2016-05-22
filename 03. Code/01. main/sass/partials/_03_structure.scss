@@ -11,10 +11,10 @@ html, body {
 }
 
 article {
-  width: 1050px;
-  margin: 0 auto;
+  width: 100%;
+  margin: 0;
   padding: 0;
-  box-shadow: 0 0 10px 5px  rgba(0,0,0,0.2);
+//  box-shadow: 0 0 10px 5px  rgba(0,0,0,0.2);
 }
 
 a {
@@ -28,16 +28,23 @@ td {
   background-clip: padding-box !important;
 }
 
+ol, ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 // Global header
 
 header {
   overflow: hidden;
   position: relative;
-  padding: 0 55px;
-  width: 100%;
+  margin: 0 auto 45px;
+  padding: 21px 60px 0;
+  width: 1050px;
   h1 {
     float: left;
-    margin: 21px 0;
+    margin: 0;
     a {
       display: block;
       height: 72px;
@@ -49,8 +56,8 @@ header {
   nav {
     float: right;
     position: absolute;
-    bottom: 21px;
-    right: 55px;
+    bottom: 5px;
+    right: 60px;
     text-align: center;
     ol {
       margin: 0;
@@ -115,24 +122,23 @@ header {
 }
 
 .section-wrapper {
-  padding: 0 55px;
+  width: 1050px;
+  margin: 0 auto 60px;
 }
 
 .metaslider {
-  margin-bottom: 34px;
+  margin: 0 auto 60px;
 }
 
 // Banner
 
 .banner-wrapper {
-  width: 100%;
-  margin: 0 0 55px;
-  padding: 0;
+  margin: 0 auto 60px;
   text-align: center;
   li {
     @include inline-block;
     &:first-child {
-      margin-right: 55px;
+      margin-right: 85px;
     }
   }
   a {
@@ -150,86 +156,91 @@ header {
     background: url("css/img/top/banner02.gif") 0 0 no-repeat;
 }
 
-// Contents
+// index.html
 
 %h2-image {
   height: 55px;
   width: 220px;
-  margin: 0 auto 34px;
+  margin: 0 auto 60px;
   text-align: center;
   color: transparent;
 }
 
 .books {
+  padding: 0 60px;
   h2 {
     @extend %h2-image;
     background: url("css/img/top/txt_books.gif") 0 0 no-repeat;
   }
 }
 
-.new-books {
+.new-books > li {
+  float: left;
+  width: 280px;
   margin: 0;
-  padding: 0;
-  list-style: none;
-  li {
-    float: left;
-    width: 215px;
-    margin: 0 49px 55px;
-    img {
-      max-height: 200px;
-      max-width: 215px;
-    }
+  img {
+    display: block;
+    max-height: 260px;
+    max-width: 280px;
+    margin-bottom: 25px;
+  }
+  &:nth-child(1) {
+    margin: 0 0 45px;
+  }
+  &:nth-child(2) {
+    margin: 0 45px 45px;
+    margin-right: 45px;
+  }
+  &:nth-child(3) {
+    margin: 0 0 45px;
+  }
+  &:nth-child(5) {
+    margin: 0 45px 0;
   }
 }
 
 .editorial {
-  margin-bottom: 55px;
+  padding: 0 110px;
   h2 {
     @extend %h2-image;
     background: url("css/img/top/txt_hensyubu.gif") 0 0 no-repeat;
   }
-  div {
-    overflow: hidden;
-    width: 940px;
-    margin: 0 auto;
-    padding: 0 13px;
-    border: solid 1px #333;
-    span {
-      display: block;
-      text-align: right;
+  h3 {
+    position: relative;
+    margin-top: 0;
+    time {
+      position: absolute;
+      bottom: 0;
+      right: 0;
     }
   }
 }
 
 .news {
-  margin-bottom: 55px;
+  padding: 0 110px;
   h2 {
     @extend %h2-image;
     background: url("css/img/top/txt_news.gif") 0 0 no-repeat;
   }
-  ul {
-    margin: 0;
-    padding: 0;
-  }
   ul > li {
     float: left;
-    overflow: hidden;
     height: 300px;
-    width: 442.5px;
-    padding: 0 13px;
-    border: solid 1px #333;
     &:first-child {
-      margin-right: 55px;
+      width: 510px;
+      margin-right: 40px;
+    }
+    &:last-child {
+      width: 280px;
     }
   }
-  ol {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+}
+
+.news-contents {
+  li {
+    line-height: 2.1em;
   }
-  span {
-    display: block;
-    text-align: right;
+  time {
+    margin-right: 30px;
   }
 }
 
@@ -237,22 +248,21 @@ header {
 
 .global-footer {
   width: 100%;
-  padding: 55px 0 0;
-  background: #eee;
+  padding: 70px 0 0;
+  background: #f2ddd2;
 }
 
 .footer-navigation {
   position: relative;
-  width: 100%;
-  margin: 0 0 34px;
-  padding: 0 55px;
+  width: 1050px;
+  margin: 0 auto 60px;
+  padding: 0 60px;
   ol {
     float: left;
-    height: 13em;
+    height: 11em;
     width: 25%;
-    margin: 0;
-    padding: 0 0 0 34px;
-    list-style: none;
+    padding: 0 0 0 20px;
+    border-left: solid 1px #a29381;
   }
 }
 
@@ -266,21 +276,132 @@ header {
 
 .footer-company-info {
   float: right;
-  height: 13em;
+  height: 11em;
   width: 50%;
-  padding: 0 0 0 34px;
-  span {
+  padding: 0 0 0 20px;
+  border-left: solid 1px #a29381;
+}
+
+.footer-copyright {
+  overflow: hidden;
+  width: 100%;
+  background: #a29381;
+  p {
+    width: 930px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+// Static pages
+
+%banner-static {
+  display: block;
+  height: 175px;
+  width: 1050px;
+  margin: 0 auto 80px;
+  color: transparent;
+}
+
+%section-wrapper-static {  
+  width: 730px;
+  margin: 0 auto 160px;
+}
+
+// bs.html
+
+.banner-bs {
+  @extend %banner-static;
+  background: url("css/img/bs/title_01.jpg") 0 0 no-repeat;
+}
+
+.section-wrapper-bs {
+  @extend %section-wrapper-static;
+  p {
     &:first-child {
-      font-size: 21px; 
+      margin-bottom: 80px;
     }
   }
 }
 
-.footer-copyright {
-  width: 100%;
-  padding: 13px 55px;
-  background: #aaa;
-  span {
-    color: #fff;
+.fax-button {
+  display: block;
+  height: 27px;
+  width: 180px;
+  color: transparent;
+  background: url("css/img/bs/dl.gif") 0 0 no-repeat;
+}
+
+// order.html
+
+.banner-order {
+  @extend %banner-static;
+  background: url("css/img/order/title_01.jpg") 0 0 no-repeat;
+}
+
+.section-wrapper-order {
+  @extend %section-wrapper-static;
+  p {
+    margin-bottom: 2em;
+    text-indent: 1em;
   }
+}
+
+// company.html
+
+.banner-company {
+  @extend %banner-static;
+  background: url("css/img/company/title_01.jpg") 0 0 no-repeat;
+}
+
+.section-wrapper-company {
+  @extend %section-wrapper-static;
+  p {
+    margin-bottom: 2em;
+    text-indent: 1em;
+  }
+}
+
+.subsection-greetings {
+  margin-bottom: 80px;
+  h3 {
+    display: block;
+    height: 40px;
+    width: 177px;
+    margin: 0 auto 55px;
+    color: transparent;
+    background: url("css/img/company/greetings.gif")
+  }
+}
+
+.subsection-cp {
+  text-align: center;
+  h3 {
+    display: block;
+    height: 40px;
+    width: 213px;
+    margin: 0 auto 50px;
+    color: transparent;
+    background: url("css/img/company/cp.gif")
+  }
+}
+
+.cp-wrapper {
+  padding: 75px 0;
+  border: dotted 1px #333;
+  h4 {
+    margin-bottom: 35px;
+  }
+  p {
+    &:nth-child(2) {
+      margin-bottom: 6em;
+    }
+  }
+}
+
+// elements
+
+.link-more {
+  display: block;
+  text-align: right;
 }
