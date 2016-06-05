@@ -421,7 +421,7 @@ header nav a {
 }
 
 /* line 298, ../sass/partials/_03_structure.scss */
-.banner-bs, .banner-order, .banner-company {
+.banner-bs, .banner-order, .banner-company, .banner-privacy {
   display: block;
   height: 175px;
   width: 1050px;
@@ -430,7 +430,7 @@ header nav a {
 }
 
 /* line 306, ../sass/partials/_03_structure.scss */
-.section-wrapper-bs, .section-wrapper-order, .section-wrapper-company {
+.section-wrapper-bs, .section-wrapper-order, .section-wrapper-company, .section-wrapper-privacy {
   width: 730px;
   margin: 0 auto 160px;
 }
@@ -519,6 +519,30 @@ header nav a {
 }
 
 /* line 404, ../sass/partials/_03_structure.scss */
+.banner-privacy {
+  background: url("css/img/order/title_01.jpg") 0 0 no-repeat;
+}
+
+/* line 411, ../sass/partials/_03_structure.scss */
+.section-wrapper-privacy li {
+  list-style: decimal;
+  margin-bottom: 2em;
+}
+/* line 415, ../sass/partials/_03_structure.scss */
+.section-wrapper-privacy p {
+  text-indent: 1em;
+}
+
+/* line 421, ../sass/partials/_03_structure.scss */
+.section-wrapper-privacy > p:first-child {
+  margin-bottom: 2em;
+}
+/* line 424, ../sass/partials/_03_structure.scss */
+.section-wrapper-privacy > p:last-child {
+  text-indent: 0;
+}
+
+/* line 431, ../sass/partials/_03_structure.scss */
 .link-more {
   display: block;
   text-align: right;

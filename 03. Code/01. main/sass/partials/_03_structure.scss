@@ -399,6 +399,33 @@ header {
   }
 }
 
+// privacy.html
+
+.banner-privacy {
+  @extend %banner-static;
+  background: url("css/img/order/title_01.jpg") 0 0 no-repeat;
+}
+
+.section-wrapper-privacy {
+  @extend %section-wrapper-static;
+  li {
+    list-style: decimal;
+    margin-bottom: 2em;
+  }
+  p {
+    text-indent: 1em;
+  }
+}
+
+.section-wrapper-privacy > p {
+  &:first-child {
+    margin-bottom: 2em;
+  }
+  &:last-child {
+    text-indent: 0;
+  }
+}
+
 // elements
 
 .link-more {
