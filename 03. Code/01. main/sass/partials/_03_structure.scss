@@ -36,7 +36,7 @@ ol, ul {
 
 // Global header
 
-header {
+#global-header {
   overflow: hidden;
   position: relative;
   margin: 0 auto 45px;
@@ -166,7 +166,7 @@ header {
   color: transparent;
 }
 
-.books {
+.index-books {
   padding: 0 60px;
   h2 {
     @extend %h2-image;
@@ -199,7 +199,7 @@ header {
   }
 }
 
-.editorial {
+.index-editorial {
   padding: 0 110px;
   h2 {
     @extend %h2-image;
@@ -216,22 +216,11 @@ header {
   }
 }
 
-.news {
+.index-news {
   padding: 0 110px;
   h2 {
     @extend %h2-image;
     background: url("css/img/top/txt_news.gif") 0 0 no-repeat;
-  }
-  ul > li {
-    float: left;
-    height: 300px;
-    &:first-child {
-      width: 510px;
-      margin-right: 40px;
-    }
-    &:last-child {
-      width: 280px;
-    }
   }
 }
 
@@ -246,7 +235,7 @@ header {
 
 // Global footer
 
-.global-footer {
+#global-footer {
   width: 100%;
   padding: 70px 0 0;
   background: #f2ddd2;
@@ -306,6 +295,99 @@ header {
 %section-wrapper-static {  
   width: 730px;
   margin: 0 auto 160px;
+}
+
+// news.html
+
+.banner-news {
+  @extend %banner-static;
+  background: url("css/img/news/title_01.jpg") 0 0 no-repeat;
+}
+
+.section-wrapper-news {
+  @extend %section-wrapper-static;
+  p {
+    margin-bottom: 2em;
+    text-indent: 1em;
+  }
+}
+
+.news-index {
+  overflow: hidden;
+  position: relative;
+  width: 930px;
+  height: 280px;
+  margin: 0 auto 30px;
+  padding: 40px 70px;
+  border: solid 1px #333333;
+  &:last-child {
+    margin-bottom: 80px;
+  }
+  .entry-header {
+    float: left;
+    width: 520px;
+    margin-bottom: 25px;
+  }
+  .entry-date {
+    float: left;
+    width: 520px;
+    text-align: right;
+  }
+  .entry-title {
+    margin: 0;
+  }
+  .entry-content {
+    float: left;
+    width: 520px;
+    p {
+      margin: 0;
+      padding: 0;
+    }
+  }
+  .post-thumbnail {
+    position: absolute;
+    right: 60px;
+    width: 215px;
+    text-align: center;
+    img {
+      width: auto;
+      height: 200px;
+    }
+  }
+}
+
+.news-single {
+  position: relative;
+  width: 930px;
+  height: auto;
+  margin: 0 auto 80px;
+  padding: 70px 175px;
+  border: solid 1px #333333;
+  .entry-header {
+    margin-bottom: 25px;
+  }
+  .post-thumbnail {
+    margin-bottom: 70px;
+    text-align: center;
+    img {
+      width: auto;
+      height: 279px;
+    }
+  }
+  .entry-date {
+    display: block;
+    width: 100%;
+    text-align: right;
+  }
+  .entry-title {
+    margin: 0;
+  }
+  .entry-content {
+    p {
+      margin: 0;
+      padding: 0;
+    }
+  }
 }
 
 // bs.html
@@ -431,4 +513,12 @@ header {
 .link-more {
   display: block;
   text-align: right;
+}
+
+.more-link {
+  text-decoration: underline;
+}
+
+.screen-reader-text {
+  visibility: hidden;
 }

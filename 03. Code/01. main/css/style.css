@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /* line 3, ../sass/partials/_02_typography.scss */
-.footer-company-info li:first-child, a, form, li, p, span, td, ul, h4, h5, input, textarea, footer, h3 {
+.footer-company-info li:first-child, a, form, li, p, span, td, ul, h4, h5, time, input, textarea, footer, h3 {
   font-weight: 300;
   font-style: normal;
   text-decoration: none;
@@ -14,12 +14,12 @@
 }
 
 /* line 17, ../sass/partials/_02_typography.scss */
-a, form, li, p, span, td, ul, h4, h5, input, textarea, footer, h3 {
+a, form, li, p, span, td, ul, h4, h5, time, input, textarea, footer, h3 {
   font-family: "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS P Gothic", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro W3", Osaka, sans-serif;
 }
 
 /* line 22, ../sass/partials/_02_typography.scss */
-a, form, li, p, span, td, ul, h4, h5, input, textarea, footer {
+a, form, li, p, span, td, ul, h4, h5, time, input, textarea, footer {
   font-size: 14px;
   color: #333;
 }
@@ -37,7 +37,7 @@ h4 {
 }
 
 /* line 40, ../sass/partials/_02_typography.scss */
-.editorial time {
+.index-editorial time {
   font-size: 14px;
 }
 
@@ -62,12 +62,24 @@ h4 {
   color: #fff;
 }
 
-/* line 70, ../sass/partials/_02_typography.scss */
+/* line 71, ../sass/partials/_02_typography.scss */
+.news-index h3 a {
+  font-size: 19px;
+  color: #a48878;
+}
+
+/* line 78, ../sass/partials/_02_typography.scss */
+.news-single h3 {
+  font-size: 19px;
+  color: #a48878;
+}
+
+/* line 86, ../sass/partials/_02_typography.scss */
 .link-more {
   color: #a48878;
 }
 
-/* line 74, ../sass/partials/_02_typography.scss */
+/* line 90, ../sass/partials/_02_typography.scss */
 .underline {
   text-decoration: underline;
 }
@@ -110,7 +122,7 @@ ol, ul {
 }
 
 /* line 39, ../sass/partials/_03_structure.scss */
-header {
+#global-header {
   overflow: hidden;
   position: relative;
   margin: 0 auto 45px;
@@ -118,12 +130,12 @@ header {
   width: 1050px;
 }
 /* line 45, ../sass/partials/_03_structure.scss */
-header h1 {
+#global-header h1 {
   float: left;
   margin: 0;
 }
 /* line 48, ../sass/partials/_03_structure.scss */
-header h1 a {
+#global-header h1 a {
   display: block;
   height: 72px;
   width: 254px;
@@ -131,7 +143,7 @@ header h1 a {
   background: url("css/img/top/logo.gif") 0 0 no-repeat;
 }
 /* line 56, ../sass/partials/_03_structure.scss */
-header nav {
+#global-header nav {
   float: right;
   position: absolute;
   bottom: 5px;
@@ -139,12 +151,12 @@ header nav {
   text-align: center;
 }
 /* line 62, ../sass/partials/_03_structure.scss */
-header nav ol {
+#global-header nav ol {
   margin: 0;
   padding: 0;
 }
 /* line 66, ../sass/partials/_03_structure.scss */
-header nav li {
+#global-header nav li {
   display: inline-block;
   vertical-align: middle;
   *vertical-align: auto;
@@ -152,11 +164,11 @@ header nav li {
   *display: inline;
 }
 /* line 68, ../sass/partials/_03_structure.scss */
-header nav li:last-child {
+#global-header nav li:last-child {
   margin: 0;
 }
 /* line 72, ../sass/partials/_03_structure.scss */
-header nav a {
+#global-header nav a {
   display: block;
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
@@ -265,7 +277,7 @@ header nav a {
 }
 
 /* line 161, ../sass/partials/_03_structure.scss */
-.books h2, .editorial h2, .news h2 {
+.index-books h2, .index-editorial h2, .index-news h2 {
   height: 55px;
   width: 220px;
   margin: 0 auto 60px;
@@ -274,11 +286,11 @@ header nav a {
 }
 
 /* line 169, ../sass/partials/_03_structure.scss */
-.books {
+.index-books {
   padding: 0 60px;
 }
 /* line 171, ../sass/partials/_03_structure.scss */
-.books h2 {
+.index-books h2 {
   background: url("css/img/top/txt_books.gif") 0 0 no-repeat;
 }
 
@@ -314,72 +326,58 @@ header nav a {
 }
 
 /* line 202, ../sass/partials/_03_structure.scss */
-.editorial {
+.index-editorial {
   padding: 0 110px;
 }
 /* line 204, ../sass/partials/_03_structure.scss */
-.editorial h2 {
+.index-editorial h2 {
   background: url("css/img/top/txt_hensyubu.gif") 0 0 no-repeat;
 }
 /* line 208, ../sass/partials/_03_structure.scss */
-.editorial h3 {
+.index-editorial h3 {
   position: relative;
   margin-top: 0;
 }
 /* line 211, ../sass/partials/_03_structure.scss */
-.editorial h3 time {
+.index-editorial h3 time {
   position: absolute;
   bottom: 0;
   right: 0;
 }
 
 /* line 219, ../sass/partials/_03_structure.scss */
-.news {
+.index-news {
   padding: 0 110px;
 }
 /* line 221, ../sass/partials/_03_structure.scss */
-.news h2 {
+.index-news h2 {
   background: url("css/img/top/txt_news.gif") 0 0 no-repeat;
 }
-/* line 225, ../sass/partials/_03_structure.scss */
-.news ul > li {
-  float: left;
-  height: 300px;
-}
-/* line 228, ../sass/partials/_03_structure.scss */
-.news ul > li:first-child {
-  width: 510px;
-  margin-right: 40px;
-}
-/* line 232, ../sass/partials/_03_structure.scss */
-.news ul > li:last-child {
-  width: 280px;
-}
 
-/* line 239, ../sass/partials/_03_structure.scss */
+/* line 228, ../sass/partials/_03_structure.scss */
 .news-contents li {
   line-height: 2.1em;
 }
-/* line 242, ../sass/partials/_03_structure.scss */
+/* line 231, ../sass/partials/_03_structure.scss */
 .news-contents time {
   margin-right: 30px;
 }
 
-/* line 249, ../sass/partials/_03_structure.scss */
-.global-footer {
+/* line 238, ../sass/partials/_03_structure.scss */
+#global-footer {
   width: 100%;
   padding: 70px 0 0;
   background: #f2ddd2;
 }
 
-/* line 255, ../sass/partials/_03_structure.scss */
+/* line 244, ../sass/partials/_03_structure.scss */
 .footer-navigation {
   position: relative;
   width: 1050px;
   margin: 0 auto 60px;
   padding: 0 60px;
 }
-/* line 260, ../sass/partials/_03_structure.scss */
+/* line 249, ../sass/partials/_03_structure.scss */
 .footer-navigation ol {
   float: left;
   height: 11em;
@@ -388,17 +386,17 @@ header nav a {
   border-left: solid 1px #a29381;
 }
 
-/* line 269, ../sass/partials/_03_structure.scss */
+/* line 258, ../sass/partials/_03_structure.scss */
 .footer-banner-1 {
   background: url("css/img/top/banner_custom.gif") 0 0 no-repeat;
 }
 
-/* line 273, ../sass/partials/_03_structure.scss */
+/* line 262, ../sass/partials/_03_structure.scss */
 .footer-banner-2 {
   background: url("css/img/top/banner_water.gif") 0 0 no-repeat;
 }
 
-/* line 277, ../sass/partials/_03_structure.scss */
+/* line 266, ../sass/partials/_03_structure.scss */
 .footer-company-info {
   float: right;
   height: 11em;
@@ -407,21 +405,21 @@ header nav a {
   border-left: solid 1px #a29381;
 }
 
-/* line 285, ../sass/partials/_03_structure.scss */
+/* line 274, ../sass/partials/_03_structure.scss */
 .footer-copyright {
   overflow: hidden;
   width: 100%;
   background: #a29381;
 }
-/* line 289, ../sass/partials/_03_structure.scss */
+/* line 278, ../sass/partials/_03_structure.scss */
 .footer-copyright p {
   width: 930px;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* line 298, ../sass/partials/_03_structure.scss */
-.banner-bs, .banner-order, .banner-company, .banner-privacy {
+/* line 287, ../sass/partials/_03_structure.scss */
+.banner-news, .banner-bs, .banner-order, .banner-company, .banner-privacy {
   display: block;
   height: 175px;
   width: 1050px;
@@ -429,23 +427,126 @@ header nav a {
   color: transparent;
 }
 
-/* line 306, ../sass/partials/_03_structure.scss */
-.section-wrapper-bs, .section-wrapper-order, .section-wrapper-company, .section-wrapper-privacy {
+/* line 295, ../sass/partials/_03_structure.scss */
+.section-wrapper-news, .section-wrapper-bs, .section-wrapper-order, .section-wrapper-company, .section-wrapper-privacy {
   width: 730px;
   margin: 0 auto 160px;
 }
 
-/* line 313, ../sass/partials/_03_structure.scss */
+/* line 302, ../sass/partials/_03_structure.scss */
+.banner-news {
+  background: url("css/img/news/title_01.jpg") 0 0 no-repeat;
+}
+
+/* line 309, ../sass/partials/_03_structure.scss */
+.section-wrapper-news p {
+  margin-bottom: 2em;
+  text-indent: 1em;
+}
+
+/* line 315, ../sass/partials/_03_structure.scss */
+.news-index {
+  overflow: hidden;
+  position: relative;
+  width: 930px;
+  height: 280px;
+  margin: 0 auto 30px;
+  padding: 40px 70px;
+  border: solid 1px #333333;
+}
+/* line 323, ../sass/partials/_03_structure.scss */
+.news-index:last-child {
+  margin-bottom: 80px;
+}
+/* line 326, ../sass/partials/_03_structure.scss */
+.news-index .entry-header {
+  float: left;
+  width: 520px;
+  margin-bottom: 25px;
+}
+/* line 331, ../sass/partials/_03_structure.scss */
+.news-index .entry-date {
+  float: left;
+  width: 520px;
+  text-align: right;
+}
+/* line 336, ../sass/partials/_03_structure.scss */
+.news-index .entry-title {
+  margin: 0;
+}
+/* line 339, ../sass/partials/_03_structure.scss */
+.news-index .entry-content {
+  float: left;
+  width: 520px;
+}
+/* line 342, ../sass/partials/_03_structure.scss */
+.news-index .entry-content p {
+  margin: 0;
+  padding: 0;
+}
+/* line 347, ../sass/partials/_03_structure.scss */
+.news-index .post-thumbnail {
+  position: absolute;
+  right: 60px;
+  width: 215px;
+  text-align: center;
+}
+/* line 352, ../sass/partials/_03_structure.scss */
+.news-index .post-thumbnail img {
+  width: auto;
+  height: 200px;
+}
+
+/* line 359, ../sass/partials/_03_structure.scss */
+.news-single {
+  position: relative;
+  width: 930px;
+  height: auto;
+  margin: 0 auto 80px;
+  padding: 70px 175px;
+  border: solid 1px #333333;
+}
+/* line 366, ../sass/partials/_03_structure.scss */
+.news-single .entry-header {
+  margin-bottom: 25px;
+}
+/* line 369, ../sass/partials/_03_structure.scss */
+.news-single .post-thumbnail {
+  margin-bottom: 70px;
+  text-align: center;
+}
+/* line 372, ../sass/partials/_03_structure.scss */
+.news-single .post-thumbnail img {
+  width: auto;
+  height: 279px;
+}
+/* line 377, ../sass/partials/_03_structure.scss */
+.news-single .entry-date {
+  display: block;
+  width: 100%;
+  text-align: right;
+}
+/* line 382, ../sass/partials/_03_structure.scss */
+.news-single .entry-title {
+  margin: 0;
+}
+/* line 386, ../sass/partials/_03_structure.scss */
+.news-single .entry-content p {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 395, ../sass/partials/_03_structure.scss */
 .banner-bs {
   background: url("css/img/bs/title_01.jpg") 0 0 no-repeat;
 }
 
-/* line 321, ../sass/partials/_03_structure.scss */
+/* line 403, ../sass/partials/_03_structure.scss */
 .section-wrapper-bs p:first-child {
   margin-bottom: 80px;
 }
 
-/* line 327, ../sass/partials/_03_structure.scss */
+/* line 409, ../sass/partials/_03_structure.scss */
 .fax-button {
   display: block;
   height: 27px;
@@ -454,33 +555,33 @@ header nav a {
   background: url("css/img/bs/dl.gif") 0 0 no-repeat;
 }
 
-/* line 337, ../sass/partials/_03_structure.scss */
+/* line 419, ../sass/partials/_03_structure.scss */
 .banner-order {
   background: url("css/img/order/title_01.jpg") 0 0 no-repeat;
 }
 
-/* line 344, ../sass/partials/_03_structure.scss */
+/* line 426, ../sass/partials/_03_structure.scss */
 .section-wrapper-order p {
   margin-bottom: 2em;
   text-indent: 1em;
 }
 
-/* line 352, ../sass/partials/_03_structure.scss */
+/* line 434, ../sass/partials/_03_structure.scss */
 .banner-company {
   background: url("css/img/company/title_01.jpg") 0 0 no-repeat;
 }
 
-/* line 359, ../sass/partials/_03_structure.scss */
+/* line 441, ../sass/partials/_03_structure.scss */
 .section-wrapper-company p {
   margin-bottom: 2em;
   text-indent: 1em;
 }
 
-/* line 365, ../sass/partials/_03_structure.scss */
+/* line 447, ../sass/partials/_03_structure.scss */
 .subsection-greetings {
   margin-bottom: 80px;
 }
-/* line 367, ../sass/partials/_03_structure.scss */
+/* line 449, ../sass/partials/_03_structure.scss */
 .subsection-greetings h3 {
   display: block;
   height: 40px;
@@ -490,11 +591,11 @@ header nav a {
   background: url("css/img/company/greetings.gif");
 }
 
-/* line 377, ../sass/partials/_03_structure.scss */
+/* line 459, ../sass/partials/_03_structure.scss */
 .subsection-cp {
   text-align: center;
 }
-/* line 379, ../sass/partials/_03_structure.scss */
+/* line 461, ../sass/partials/_03_structure.scss */
 .subsection-cp h3 {
   display: block;
   height: 40px;
@@ -504,48 +605,58 @@ header nav a {
   background: url("css/img/company/cp.gif");
 }
 
-/* line 389, ../sass/partials/_03_structure.scss */
+/* line 471, ../sass/partials/_03_structure.scss */
 .cp-wrapper {
   padding: 75px 0;
   border: dotted 1px #333;
 }
-/* line 392, ../sass/partials/_03_structure.scss */
+/* line 474, ../sass/partials/_03_structure.scss */
 .cp-wrapper h4 {
   margin-bottom: 35px;
 }
-/* line 396, ../sass/partials/_03_structure.scss */
+/* line 478, ../sass/partials/_03_structure.scss */
 .cp-wrapper p:nth-child(2) {
   margin-bottom: 6em;
 }
 
-/* line 404, ../sass/partials/_03_structure.scss */
+/* line 486, ../sass/partials/_03_structure.scss */
 .banner-privacy {
   background: url("css/img/privacy/title_01.jpg") 0 0 no-repeat;
 }
 
-/* line 411, ../sass/partials/_03_structure.scss */
+/* line 493, ../sass/partials/_03_structure.scss */
 .section-wrapper-privacy li {
   list-style: decimal;
   margin-bottom: 2em;
 }
-/* line 415, ../sass/partials/_03_structure.scss */
+/* line 497, ../sass/partials/_03_structure.scss */
 .section-wrapper-privacy p {
   text-indent: 1em;
 }
 
-/* line 421, ../sass/partials/_03_structure.scss */
+/* line 503, ../sass/partials/_03_structure.scss */
 .section-wrapper-privacy > p:first-child {
   margin-bottom: 2em;
 }
-/* line 424, ../sass/partials/_03_structure.scss */
+/* line 506, ../sass/partials/_03_structure.scss */
 .section-wrapper-privacy > p:last-child {
   text-indent: 0;
 }
 
-/* line 431, ../sass/partials/_03_structure.scss */
+/* line 513, ../sass/partials/_03_structure.scss */
 .link-more {
   display: block;
   text-align: right;
+}
+
+/* line 518, ../sass/partials/_03_structure.scss */
+.more-link {
+  text-decoration: underline;
+}
+
+/* line 522, ../sass/partials/_03_structure.scss */
+.screen-reader-text {
+  visibility: hidden;
 }
 
 /* line 3, ../sass/partials/_05_gvariables.scss */

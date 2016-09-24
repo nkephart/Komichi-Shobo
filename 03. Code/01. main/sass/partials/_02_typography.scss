@@ -19,7 +19,7 @@
   font-family: "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS P Gothic", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro W3", Osaka, sans-serif;
 }
 
-a, form, li, p, span, td, ul, h4, h5, input, textarea, footer {
+a, form, li, p, span, td, ul, h4, h5, time, input, textarea, footer {
   @extend %text-sans-serif;
   font-size: 14px;
   color: #333;
@@ -37,7 +37,7 @@ h4 {
   color: #333;
 }
 
-.editorial time {
+.index-editorial time {
   font-size: 14px;
 }
 
@@ -62,6 +62,22 @@ h4 {
   p {
     font-size: 11px;
     color: #fff;
+  }
+}
+
+// news.html
+
+.news-index {
+  h3 a {
+    font-size: 19px;
+    color: #a48878;
+  }
+}
+
+.news-single {
+  h3 {
+    font-size: 19px;
+    color: #a48878;
   }
 }
 
