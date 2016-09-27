@@ -65,12 +65,15 @@ h4 {
   }
 }
 
-// news.html
+// news.html, books.html
 
-.news-index {
+.news-index, .books-index {
   h3 a {
     font-size: 19px;
     color: #a48878;
+  }
+  h4 {
+    font-size: 14px;
   }
 }
 
@@ -78,6 +81,27 @@ h4 {
   h3 {
     font-size: 19px;
     color: #a48878;
+  }
+  h4 {
+    font-size: 14px;
+    color: #333333;
+  }
+}
+
+.books-single {
+  h3 {
+    font-size: 20px;
+    color: #333333;
+  }
+  h4 {
+    font-size: 14px;
+    color: #333333;
+    &:first-letter {
+      color: #c9caca;
+    }
+  }
+  h5 {
+    font-size: 14px;
   }
 }
 

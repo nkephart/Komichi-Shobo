@@ -304,11 +304,9 @@ ol, ul {
   background: url("css/img/news/title_01.jpg") 0 0 no-repeat;
 }
 
-.section-wrapper-news {
-  @extend %section-wrapper-static;
-  p {
-    margin-bottom: 2em;
-    text-indent: 1em;
+.news {
+  &:last-child {
+    margin-bottom: 80px;
   }
 }
 
@@ -319,10 +317,7 @@ ol, ul {
   height: 280px;
   margin: 0 auto 30px;
   padding: 40px 70px;
-  border: solid 1px #333333;
-  &:last-child {
-    margin-bottom: 80px;
-  }
+  border: solid 1px #c9caca;
   .entry-header {
     float: left;
     width: 520px;
@@ -362,7 +357,7 @@ ol, ul {
   height: auto;
   margin: 0 auto 80px;
   padding: 70px 175px;
-  border: solid 1px #333333;
+  border: solid 1px #c9caca;
   .entry-header {
     margin-bottom: 25px;
   }
@@ -387,6 +382,132 @@ ol, ul {
       margin: 0;
       padding: 0;
     }
+  }
+}
+
+// books.html
+
+.banner-books {
+  @extend %banner-static;
+  background: url("css/img/books/title_01.jpg") 0 0 no-repeat;
+}
+
+.books {
+  &:last-child {
+    margin-bottom: 80px;
+  }
+}
+
+.books-index {
+  overflow: hidden;
+  position: relative;
+  width: 930px;
+  height: 286px;
+  margin: 0 auto 30px;
+  padding: 40px 70px;
+  border: solid 1px #c9caca;
+  .index-hide {
+    display: none;   
+  }
+  .entry-header {
+    float: left;
+    width: 520px;
+    margin: 0;
+  }
+  .entry-date {
+    float: left;
+    width: 520px;
+    text-align: right;
+  }
+  .entry-title {
+    margin: 0;
+  }
+  .entry-subtitle {
+    margin: 0 0 0.5em;
+  }
+  hr {
+    margin: 0 0 6px;
+    border: none;
+    border-top: dotted 1px #c9caca;
+  }
+  .entry-content {
+    float: left;
+    width: 520px;
+    p {
+      margin: 0;
+      padding: 0;
+    }
+  }
+  .post-thumbnail {
+    position: absolute;
+    right: 60px;
+    width: 215px;
+    text-align: center;
+    img {
+      width: auto;
+      height: 200px;
+    }
+  }
+}
+
+.books-single {
+  position: relative;
+  width: 930px;
+  height: auto;
+  margin: 0 auto 80px;
+  padding: 70px 175px;
+  border: solid 1px #c9caca;
+  .post-thumbnail {
+    margin-bottom: 70px;
+    text-align: center;
+    img {
+      width: auto;
+      height: 323px;
+    }
+  }
+  .entry-title {
+    margin: 0;
+  }
+  hr {
+    margin: 3em 0;
+    border: none;
+    border-top: dotted 1px #c9caca;
+  }
+  .entry-content {
+    position: relative;
+    p {
+      margin: 0;
+      padding: 0;
+    }
+  }
+  .book-purchase {
+    position: absolute;
+    top: 0;
+    right: 0;
+    .amazon {
+      display: block;
+      height: 26px;
+      width: 127px;
+      margin-bottom: 1em;
+      color: transparent;
+      background: url("css/img/books/banner/amazon.png") 0 0 no-repeat;
+    }
+    .hanmotocom {
+      display: block;
+      height: 55px;
+      width: 200px;
+      color: transparent;
+      background: url("css/img/books/banner/hanmotocom.png") 0 0 no-repeat;
+    }
+  }
+  h4 {
+    margin-bottom: 0;
+  }
+  h5 {
+    margin: 0;
+  }
+  ol {
+    margin-bottom: 1.5em;
   }
 }
 
@@ -513,10 +634,6 @@ ol, ul {
 .link-more {
   display: block;
   text-align: right;
-}
-
-.more-link {
-  text-decoration: underline;
 }
 
 .screen-reader-text {
