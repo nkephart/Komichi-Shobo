@@ -824,6 +824,25 @@ ol, ul {
   visibility: hidden;
 }
 
+/* line 643, ../sass/partials/_03_structure.scss */
+.posts-nav {
+  margin: 50px 0;
+  text-align: center;
+}
+/* line 646, ../sass/partials/_03_structure.scss */
+.posts-nav li {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  padding: 0 10px;
+}
+/* line 650, ../sass/partials/_03_structure.scss */
+.posts-nav .active {
+  background: #f2ddd2;
+}
+
 /* line 3, ../sass/partials/_05_gvariables.scss */
 .align-l {
   text-align: left;

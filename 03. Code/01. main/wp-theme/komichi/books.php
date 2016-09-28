@@ -18,7 +18,7 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-<?php query_posts('post_type=books'); ?>
+        <?php query_posts('post_type=books'); ?>
 
         <?php $loop = new WP_Query('page_id='.$post->ID); ?>
         <?php
@@ -26,7 +26,7 @@ get_header(); ?>
             the_content();
           endwhile;
         ?>
-
+        <?php numeric_posts_nav(); ?>
         <?php
 		// Start the loop.
 		while ( have_posts() ) : the_post();
@@ -37,7 +37,7 @@ get_header(); ?>
 		// End the loop.
 		endwhile;
 		?>
-
+        <?php numeric_posts_nav(); ?>
 
 		</main><!-- .site-main -->
 	</div><!-- .content-area -->
