@@ -1,6 +1,7 @@
 WordPress
 http://custom.komichi.co.jp/wordpress
 http://custom.komichi.co.jp/wordpress/wp-login.php
+http://182.93.126.204/test/wp-admin
 
 Site
 http://startsite.komichi.co.jp/
