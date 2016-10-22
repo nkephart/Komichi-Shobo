@@ -18,7 +18,13 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-<?php query_posts('post_type=news'); ?>
+        <?php
+          $args = array(
+            'post_type' => array( 'news', 'editor' ),
+            'paged' => $paged,
+          );
+        ?>
+        <?php query_posts( $args ); ?>
 
         <?php $loop = new WP_Query('page_id='.$post->ID); ?>
         <?php
@@ -27,7 +33,7 @@ get_header(); ?>
           endwhile;
         ?>
 
-        <?php
+        <?php numeric_nav();
 		// Start the loop.
 		while ( have_posts() ) : the_post();
 
@@ -36,8 +42,7 @@ get_header(); ?>
 
 		// End the loop.
 		endwhile;
-		?>
-
+		numeric_nav(); ?>
 
 		</main><!-- .site-main -->
 	</div><!-- .content-area -->

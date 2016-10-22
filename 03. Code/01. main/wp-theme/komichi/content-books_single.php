@@ -11,15 +11,17 @@
 ?>
 
 <section id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+  <a href="javascript:history.back();" class="link-previous">&lt;&lt;&nbsp;前のページに戻る</a>
   <div class="books-single">
     <header class="entry-header">
-      <?php
-        twentyfifteen_post_thumbnail();
-        the_title( '<h3 class="entry-title">', '</h3>' );
-      ?>
+      <ul class="entry-image">
+        <li><?php twentyfifteen_post_thumbnail(); ?>
+        </li><li><img src="<?php echo post_image_capture(); ?>" class="entry-subimage" /></li>
+      </ul>
     </header><!-- .entry-header -->
 
     <div class="entry-content">
+      <?php the_title( '<h3 class="entry-title">', '</h3>' ); ?>
       <?php
         /* translators: %s: Name of current post */
         the_content( sprintf(
@@ -38,4 +40,5 @@
       ?>
     </div><!-- .entry-content -->
   </div>
+  <a href="javascript:history.back();" class="link-previous">&lt;&lt;&nbsp;前のページに戻る</a>
 </section><!-- #post-## -->

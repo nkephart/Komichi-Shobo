@@ -11,32 +11,31 @@
  * @since Twenty Fifteen 1.0
  */
 
-/* Template Name: Books */
+/* Template Name: Category Archive */
 
 get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-        
+
         <?php
+          $current_category = get_queried_object();
+          $slug = $current_category->slug;
           $args = array(
-            'post_type' => 'books', /* 投稿タイプを指定 */
+            'post_type' => 'books',
             'paged' => $paged,
+            'taxonomy' => 'category',
+            'category_name' => $slug
           );
         ?>
         <?php query_posts( $args ); ?>
 
-        <?php $loop = new WP_Query('page_id='.$post->ID); ?>
-        <?php
-          while ( $loop->have_posts() ) : $loop->the_post();
-            the_content();
-          endwhile;
-        ?>
+        <h2 class="banner-books" title="書籍の紹介">書籍の紹介</h2>
 
         <div class="books-header cf">
           <nav class="books-nav">
             <ul>
-              <li class="n01"><a href="/test/books" class="current" ?> title="全ての本">全ての本
+              <li class="n01"><a href="/test/books" title="全ての本">全ての本
               </a></li><li class="n02"><a href="/test/category/n02" <?php body_class(); ?> title="こころの健康">こころの健康
               </a></li><li class="n03"><a href="/test/category/n03" <?php body_class(); ?> title="からだの健康">からだの健康
               </a></li><li class="n04"><a href="/test/category/n04" <?php body_class(); ?> title="社会・思想・哲学">社会・思想・哲学
@@ -55,7 +54,8 @@ get_header(); ?>
           </nav>
         </div>  
 
-        <?php numeric_nav();
+        <?php numeric_nav(); ?>
+        <?php
 		// Start the loop.
 		while ( have_posts() ) : the_post();
 
@@ -64,6 +64,7 @@ get_header(); ?>
 
 		// End the loop.
 		endwhile;
+          
         numeric_nav();
 		?>
 

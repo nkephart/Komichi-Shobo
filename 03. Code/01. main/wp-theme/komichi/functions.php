@@ -431,3 +431,84 @@ function numeric_posts_nav() {
 
   echo '</ul></div>' . "\n";
 }
+
+/**
+ * function added for numerical pagination
+ */
+if ( ! function_exists( 'numeric_nav' ) ) :
+ // Display navigation to next/previous set of posts when applicable.
+ // Based on paging nav function from Twenty Fourteen
+
+function numeric_nav() {
+  // Don't print empty markup if there's only one page.
+  if ( $GLOBALS['wp_query']->max_num_pages < 2 ) {
+    return;
+  }
+
+  $paged = get_query_var( 'paged' ) ? intval( get_query_var( 'paged' ) ) : 1;
+  $pagenum_link = html_entity_decode( get_pagenum_link() );
+  $query_args   = array();
+  $url_parts    = explode( '?', $pagenum_link );
+
+  if ( isset( $url_parts[1] ) ) {
+    wp_parse_str( $url_parts[1], $query_args );
+  }
+
+  $pagenum_link = remove_query_arg( array_keys( $query_args ), $pagenum_link );
+  $pagenum_link = trailingslashit( $pagenum_link ) . '%_%';
+
+  $format  = $GLOBALS['wp_rewrite']->using_index_permalinks() && ! strpos( $pagenum_link, 'index.php' ) ? 'index.php/' : '';
+  $format .= $GLOBALS['wp_rewrite']->using_permalinks() ? user_trailingslashit( 'page/%#%', 'paged' ) : '?paged=%#%';
+
+  // Set up paginated links.
+  $links = paginate_links( array(
+    'base'     => $pagenum_link,
+    'format'   => $format,
+    'total'    => $GLOBALS['wp_query']->max_num_pages,
+    'current'  => $paged,
+    'mid_size' => 3,
+    'add_args' => array_map( 'urlencode', $query_args ),
+    'prev_text' => __( '&lt;&lt; Prev', 'yourtheme' ),
+    'next_text' => __( 'Next &gt;&gt;', 'yourtheme' ),
+    'type'      => 'list',
+  ) );
+
+  if ( $links ) :
+
+  ?>
+  <nav class="numeric-nav" role="navigation">
+    <?php echo $links; ?>
+  </nav><!-- .navigation -->
+  <?php
+  endif;
+}
+
+/**
+ * Custom search for books post
+ */
+function books_search( $search, $wp_query ) {
+  if ( !$wp_query->is_search ) return;
+  $search .= " AND (post_type = 'post' OR post_type='books') ";
+  return $search;
+}
+add_filter('posts_search','books_search', 10, 2);
+
+/**
+ * Get first image of post
+ */
+function post_image_capture() {
+  global $post, $posts;
+  $first_img = '';
+  ob_start();
+  ob_end_clean();
+  $output = preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post->post_content, $matches);
+  $first_img = $matches [1] [0];
+ 
+  if(empty($first_img)){
+    return ;
+  }
+  return $first_img;
+}
+
+endif;
+?>

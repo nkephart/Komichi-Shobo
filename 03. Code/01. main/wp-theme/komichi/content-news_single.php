@@ -11,6 +11,7 @@
 ?>
 
 <section id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+  <a href="javascript:history.back();" class="link-previous">&lt;&lt;&nbsp;前のページに戻る</a>
   <div class="news-single">
     <header class="entry-header">
       <?php
@@ -39,4 +40,5 @@
       ?>
     </div><!-- .entry-content -->
   </div>
+  <a href="javascript:history.back();" class="link-previous">&lt;&lt;&nbsp;前のページに戻る</a>
 </section><!-- #post-## -->
