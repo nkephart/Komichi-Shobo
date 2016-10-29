@@ -68,7 +68,7 @@ get_header(); ?>
         </ol>
       </section>
 
-      <section class="index-editorial section-wrapper">
+      <section class="index-editorial section-wrapper cf">
         <h2>編集部より</h2>
         <?php
           $args = array(
@@ -106,16 +106,16 @@ get_header(); ?>
               <?php query_posts( $args ); ?>
               <?php while ( have_posts() ) : the_post(); ?>
               <li>
+                <time><?php the_time('Y.m.d'); ?></time>
                 <?php
-                  the_date('Y.m.d', '<time>', '</time>');
                   the_title( sprintf( '<a href="%s">', esc_url( get_permalink() ) ), '</a>' );
                 ?>
               </li>
               <?php endwhile; wp_reset_postdata(); wp_reset_query(); ?>
-              <li><a href="/test/news" class="link-more">more&nbsp;&gt;&gt;</a></li>
             </ol>
           </li>
         </ul>
+        <a href="/test/news" class="link-more">more&nbsp;&gt;&gt;</a>
       </section>
     </main><!-- .site-main -->
   </div><!-- .content-area -->

@@ -240,6 +240,15 @@ ol, ul {
       right: 0;
     }
   }
+  p {
+    margin: 0;
+  }
+  figure {
+    display: none;
+  }
+  .more-link {
+    display: none;
+  }
 }
 
 .index-news {
@@ -362,11 +371,14 @@ ol, ul {
   .entry-content {
     float: left;
     width: 520px;
+    max-height: 110px;
+    overflow: hidden;
     p {
-      max-height: 110px;
-      overflow: hidden;
       margin: 0;
       padding: 0;
+    }
+    figure {
+      display: none;
     }
   }
   .post-thumbnail {
@@ -387,6 +399,14 @@ ol, ul {
   border: solid 1px #c9caca;
   .entry-header {
     margin-bottom: 25px;
+  }
+  .entry-content {
+    figure {
+      margin: 0;
+    }
+    figcaption {
+      display: none;
+    }
   }
   .post-thumbnail {
     margin-bottom: 70px;
@@ -868,8 +888,7 @@ ol, ul {
 // elements
 
 .link-more {
-  display: block;
-  text-align: right;
+  float: right;
 }
 
 .link-previous {
