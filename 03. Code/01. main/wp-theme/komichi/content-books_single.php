@@ -15,28 +15,15 @@
   <div class="books-single">
     <header class="entry-header">
       <ul class="entry-image">
-        <li><?php twentyfifteen_post_thumbnail(); ?>
-        </li><li><img src="<?php echo post_image_capture(); ?>" class="entry-subimage" /></li>
+        <li class="post-thumbnail"><?php the_post_thumbnail( 'books-thumbnails' ); ?>
+        </li><?php $url = post_image_capture(); if (  !empty( $url ) ) { echo '<li><img src="' . $url . '" class="entry-subimage" /></li>'; } ?>
       </ul>
     </header><!-- .entry-header -->
 
     <div class="entry-content">
-      <?php the_title( '<h3 class="entry-title">', '</h3>' ); ?>
       <?php
-        /* translators: %s: Name of current post */
-        the_content( sprintf(
-          __( 'Continue reading %s', 'twentyfifteen' ),
-          the_title( '<span class="screen-reader-text">', '</span>', false )
-        ) );
-
-        wp_link_pages( array(
-          'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'twentyfifteen' ) . '</span>',
-          'after'       => '</div>',
-          'link_before' => '<span>',
-          'link_after'  => '</span>',
-          'pagelink'    => '<span class="screen-reader-text">' . __( 'Page', 'twentyfifteen' ) . ' </span>%',
-          'separator'   => '<span class="screen-reader-text">, </span>',
-        ) );
+      the_title( '<h3 class="entry-title">', '</h3>' );
+      the_content();
       ?>
     </div><!-- .entry-content -->
   </div>

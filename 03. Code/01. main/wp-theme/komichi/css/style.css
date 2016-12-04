@@ -666,7 +666,7 @@ ol, ul {
   margin-left: 75px;
 }
 /* line 471, ../sass/partials/_03_structure.scss */
-.books-nav .n01 a.current {
+.books-nav .current {
   background: url("css/img/books/navi/n01.gif") 0 0 no-repeat;
 }
 /* line 474, ../sass/partials/_03_structure.scss */
@@ -686,7 +686,7 @@ ol, ul {
   background: url("css/img/books/navi/n01_on.gif") 0 0 no-repeat;
 }
 /* line 487, ../sass/partials/_03_structure.scss */
-.books-nav .n02 a.current {
+.books-nav .n02 .category-n02 {
   background: url("css/img/books/navi/n02.gif") 0 0 no-repeat;
 }
 /* line 490, ../sass/partials/_03_structure.scss */
@@ -706,7 +706,7 @@ ol, ul {
   background: url("css/img/books/navi/n02_on.gif") 0 0 no-repeat;
 }
 /* line 503, ../sass/partials/_03_structure.scss */
-.books-nav .n03 a.current {
+.books-nav .n03 .category-n03 {
   background: url("css/img/books/navi/n03.gif") 0 0 no-repeat;
 }
 /* line 506, ../sass/partials/_03_structure.scss */
@@ -726,7 +726,7 @@ ol, ul {
   background: url("css/img/books/navi/n03_on.gif") 0 0 no-repeat;
 }
 /* line 519, ../sass/partials/_03_structure.scss */
-.books-nav .n04 a.current {
+.books-nav .n04 .category-n04 {
   background: url("css/img/books/navi/n04.gif") 0 0 no-repeat;
 }
 /* line 522, ../sass/partials/_03_structure.scss */
@@ -746,7 +746,7 @@ ol, ul {
   background: url("css/img/books/navi/n04_on.gif") 0 0 no-repeat;
 }
 /* line 535, ../sass/partials/_03_structure.scss */
-.books-nav .n05 a.current {
+.books-nav .n05 .category-n05 {
   background: url("css/img/books/navi/n05.gif") 0 0 no-repeat;
 }
 /* line 538, ../sass/partials/_03_structure.scss */
@@ -766,7 +766,7 @@ ol, ul {
   background: url("css/img/books/navi/n05_on.gif") 0 0 no-repeat;
 }
 /* line 551, ../sass/partials/_03_structure.scss */
-.books-nav .n06 a.current {
+.books-nav .n06 .category-n06 {
   background: url("css/img/books/navi/n06.gif") 0 0 no-repeat;
 }
 /* line 554, ../sass/partials/_03_structure.scss */
@@ -786,7 +786,7 @@ ol, ul {
   background: url("css/img/books/navi/n06_on.gif") 0 0 no-repeat;
 }
 /* line 567, ../sass/partials/_03_structure.scss */
-.books-nav .n07 a.current {
+.books-nav .n07 .category-n07 {
   background: url("css/img/books/navi/n07.gif") 0 0 no-repeat;
 }
 /* line 570, ../sass/partials/_03_structure.scss */

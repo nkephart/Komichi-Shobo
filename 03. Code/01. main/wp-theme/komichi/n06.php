@@ -5,7 +5,7 @@
  * @since Twenty Fifteen 1.0
  */
 
-/* Template Name: Books */
+/* Template Name: n06 */
 
 get_header(); ?>
   <div id="primary" class="content-area">
@@ -14,12 +14,12 @@ get_header(); ?>
       <div class="books-header cf">
         <nav class="books-nav">
           <ul>
-            <li class="n01"><a href="/books" class="current" title="全ての本">全ての本
+            <li class="n01"><a href="/books" title="全ての本">全ての本
             </a></li><li class="n02"><a href="/books/n02" <?php body_class(); ?> title="こころの健康">こころの健康
             </a></li><li class="n03"><a href="/books/n03" <?php body_class(); ?> title="からだの健康">からだの健康
             </a></li><li class="n04"><a href="/books/n04" <?php body_class(); ?> title="社会・思想・哲学">社会・思想・哲学
             </a></li><li class="n05"><a href="/books/n05" <?php body_class(); ?> title="ノンフィクション">ノンフィクション
-            </a></li><li class="n06"><a href="/books/n06" <?php body_class(); ?> title="文学・絵本">文学・絵本
+            </a></li><li class="n06"><a href="/books/n06" <?php body_class( 'current' ); ?> title="文学・絵本">文学・絵本
             </a></li><li class="n07"><a href="/books/n07" <?php body_class(); ?> title="英語の教え方・学び方">英語の教え方・学び方
             </a></li>
             <li>
@@ -31,14 +31,16 @@ get_header(); ?>
             </li>
           </ul>
         </nav>
-      </div>  
+      </div>
 
       <?php
-      // Get specified posts data
+      $slug = get_queried_object()->slug;
       $args = array(
         'post_type' => 'books',
-        'paged' => $paged
-      );      
+        'paged' => $paged,
+        'taxonomy' => 'category',
+        'category_name' => 'n06'
+      );
       $post_loop = new WP_Query( $args );
       $max_num_pages = $post_loop->max_num_pages; // Set pages info for pagination
 

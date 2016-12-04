@@ -25,14 +25,14 @@
 <div id="page" class="hfeed site">
 <div id="content" class="site-content">
 <header role="banner" id="global-header" class="cf">
-  <h1><a href="/test" title="こみち書房">こみち書房</a></h1>
+  <h1><a href="<?php echo esc_url( home_url() ); ?>" title="こみち書房">こみち書房</a></h1>
   <nav role="navigation" class="header-navigation">
     <ol>
-      <li><a href="/test/news" class="nav-news" title="お知らせ"></a></li>
-      <li><a href="/test/books" class="nav-books" title="書籍の紹介"></a></li>
-      <li><a href="/test/bs" class="nav-bs" title="書店さまへ"></a></li>
-      <li><a href="/test/order" class="nav-order" title="本を購入される方へ"></a></li>
-      <li><a href="/test/company" class="nav-company" title="会社について"></a></li>
+      <li><a href="/news" class="nav-news" title="お知らせ"></a></li>
+      <li><a href="/books" class="nav-books" title="書籍の紹介"></a></li>
+      <li><a href="/bs" class="nav-bs" title="書店さまへ"></a></li>
+      <li><a href="/order" class="nav-order" title="本を購入される方へ"></a></li>
+      <li><a href="/company" class="nav-company" title="会社について"></a></li>
     </ol>
   </nav>
 </header>

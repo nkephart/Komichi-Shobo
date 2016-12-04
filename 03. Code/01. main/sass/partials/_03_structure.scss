@@ -468,7 +468,7 @@ ol, ul {
       margin-left: 75px;
     }
   }
-  .n01 > .current {
+  .n01 a.current {
     background: url("css/img/books/navi/n01.gif") 0 0 no-repeat;
   }
   .n01 a {
@@ -484,7 +484,7 @@ ol, ul {
       background: url("css/img/books/navi/n01_on.gif") 0 0 no-repeat;
     }
   }
-  .n02 .category-n02 {
+  .n02 a.current {
     background: url("css/img/books/navi/n02.gif") 0 0 no-repeat;
   }
   .n02 a {
@@ -500,7 +500,7 @@ ol, ul {
       background: url("css/img/books/navi/n02_on.gif") 0 0 no-repeat;
     }
   }
-  .n03 .category-n03 {
+  .n03 a.current {
     background: url("css/img/books/navi/n03.gif") 0 0 no-repeat;
   }
   .n03 a {
@@ -516,7 +516,7 @@ ol, ul {
       background: url("css/img/books/navi/n03_on.gif") 0 0 no-repeat;
     }
   }
-  .n04 .category-n04 {
+  .n04 a.current {
     background: url("css/img/books/navi/n04.gif") 0 0 no-repeat;
   }
   .n04 a {
@@ -532,7 +532,7 @@ ol, ul {
       background: url("css/img/books/navi/n04_on.gif") 0 0 no-repeat;
     }
   }
-  .n05 .category-n05 {
+  .n05 a.current {
     background: url("css/img/books/navi/n05.gif") 0 0 no-repeat;
   }
   .n05 a {
@@ -548,7 +548,7 @@ ol, ul {
       background: url("css/img/books/navi/n05_on.gif") 0 0 no-repeat;
     }
   }
-  .n06 .category-n06 {
+  .n06 a.current {
     background: url("css/img/books/navi/n06.gif") 0 0 no-repeat;
   }
   .n06 a {
@@ -564,7 +564,7 @@ ol, ul {
       background: url("css/img/books/navi/n06_on.gif") 0 0 no-repeat;
     }
   }
-  .n07 .category-n07 {
+  .n07 a.current {
     background: url("css/img/books/navi/n07.gif") 0 0 no-repeat;
   }
   .n07 a {
@@ -689,7 +689,7 @@ ol, ul {
     text-align: center;
     li {
       @include inline-block;
-      &:last-child {
+      &:nth-child(2) {
         margin-left: 70px;
       }
     }
@@ -698,10 +698,12 @@ ol, ul {
     margin-bottom: 70px;
     img {
       height: 323px;
+      width: auto;
     }
   }
   .entry-subimage {
     height: 323px;
+    width: auto;
     margin-bottom: 70px;
   }
   .entry-title {
