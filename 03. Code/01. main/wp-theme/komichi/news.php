@@ -27,12 +27,13 @@ get_header(); ?>
         'post_type' => array( 'news', 'editor' ),
         'paged' => $paged
       );      
-      $post_loop = new WP_Query( $args );
-      $max_num_pages = $post_loop->max_num_pages; // Set pages info for pagination
+      $loop = new WP_Query( $args );
+      // Set pages info for pagination
+      $max_num_pages = $loop->max_num_pages;
 
       numeric_nav( $max_num_pages ); // Pagination
 
-      while ( $post_loop->have_posts() ) : $post_loop->the_post();
+      while( $loop->have_posts() ) : $loop->the_post();
         get_template_part( 'content', 'news' );
       endwhile;
 

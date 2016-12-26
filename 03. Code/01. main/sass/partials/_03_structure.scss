@@ -20,8 +20,6 @@ article {
 a {
   padding: 5px 0;
   text-decoration: none;
-  &:hover {
-  }
 }
 
 td {
@@ -39,7 +37,7 @@ ol, ul {
 #global-header {
   overflow: hidden;
   position: relative;
-  margin: 0 auto 45px;
+  margin: 0 auto 30px;
   padding: 21px 60px 0;
   width: 1050px;
   h1 {
@@ -71,7 +69,7 @@ ol, ul {
     }
     a {
       display: block;
-      @include transition(all 0.3s ease-in-out);
+      @include transition(all 0.2s ease-in-out);
     }
   } 
 }
@@ -123,17 +121,17 @@ ol, ul {
 
 .section-wrapper {
   width: 1050px;
-  margin: 0 auto 60px;
+  margin: 0 auto 30px;
 }
 
 .metaslider {
-  margin: 0 auto 60px;
+  margin: 0 auto 30px;
 }
 
 // Banner
 
 .banner-wrapper {
-  margin: 0 auto 60px;
+  margin: 0 auto 45px;
   text-align: center;
   li {
     @include inline-block;
@@ -161,7 +159,7 @@ ol, ul {
 %h2-image {
   height: 55px;
   width: 220px;
-  margin: 0 auto 60px;
+  margin: 0 auto 30px;
   text-align: center;
   color: transparent;
 }
@@ -211,17 +209,17 @@ ol, ul {
     margin-bottom: 25px;
   }
   &:nth-child(1) {
-    margin: 0 0 45px;
+    margin: 0 0 30px;
   }
   &:nth-child(2) {
-    margin: 0 45px 45px;
-    margin-right: 45px;
+    margin: 0 45px 30px;
+//    margin-right: 45px;
   }
   &:nth-child(3) {
-    margin: 0 0 45px;
+    margin: 0 0 30px;
   }
   &:nth-child(5) {
-    margin: 0 45px 0;
+    margin: 0 30px 0;
   }
 }
 
@@ -272,14 +270,14 @@ ol, ul {
 
 #global-footer {
   width: 100%;
-  padding: 70px 0 0;
-  background: #f2ddd2;
+  padding: 45px 0 0;
+  background: rgb(242,221,210);
 }
 
 .footer-navigation {
   position: relative;
   width: 1050px;
-  margin: 0 auto 60px;
+  margin: 0 auto 45px;
   padding: 0 60px;
   ol {
     float: left;
@@ -323,13 +321,13 @@ ol, ul {
   display: block;
   height: 175px;
   width: 1050px;
-  margin: 0 auto 80px;
+  margin: 0 auto 30px;
   color: transparent;
 }
 
 %section-wrapper-static {  
   width: 730px;
-  margin: 0 auto 160px;
+  margin: 0 auto 80px;
 }
 
 // news.html
@@ -341,7 +339,7 @@ ol, ul {
 
 .news, .editor { // include for editor post type
   width: 930px;
-  margin: 0 auto 80px;
+  margin: 0 auto 30px;
   &:last-child {
     margin-bottom: 80px;
   }
@@ -395,7 +393,7 @@ ol, ul {
 
 .news-single {
   position: relative;
-  padding: 70px 175px;
+  padding: 30px 175px;
   border: solid 1px #c9caca;
   .entry-header {
     margin-bottom: 25px;
@@ -441,7 +439,7 @@ ol, ul {
 
 .books {
   width: 930px;
-  margin: 0 auto 80px;
+  margin: 0 auto 30px;
   &:last-child {
     margin-bottom: 80px;
   }
@@ -453,7 +451,7 @@ ol, ul {
 }
 
 .books-nav {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   li {
     margin-right: 5px;
     @include inline-block;
@@ -680,7 +678,7 @@ ol, ul {
 
 .books-single {
   position: relative;
-  padding: 70px 0;
+  padding: 30px 0;
   border: solid 1px #c9caca;
   .post-hide {
     display: none;
@@ -695,7 +693,7 @@ ol, ul {
     }
   }
   .post-thumbnail {
-    margin-bottom: 70px;
+    margin-bottom: 30px;
     img {
       height: 323px;
       width: auto;
@@ -704,7 +702,7 @@ ol, ul {
   .entry-subimage {
     height: 323px;
     width: auto;
-    margin-bottom: 70px;
+    margin-bottom: 30px;
   }
   .entry-title {
     position: relative;
@@ -712,7 +710,7 @@ ol, ul {
     @include inline-block;
   }
   hr {
-    margin: 3em 0;
+    margin: 1em 0;
     border: none;
     border-top: dotted 1px #c9caca;
   }
@@ -849,7 +847,7 @@ ol, ul {
 
 .cp-wrapper {
   padding: 75px 0;
-  border: dotted 1px #333;
+  border: dotted 1px #333333;
   h4 {
     margin-bottom: 35px;
   }
@@ -887,14 +885,16 @@ ol, ul {
   }
 }
 
+// search.php
+
+.search-query {
+  margin: 0;
+}
+
 // elements
 
 .link-more {
   float: right;
-}
-
-.link-previous {
-  color: #a48878;
 }
 
 .screen-reader-text {
@@ -902,12 +902,19 @@ ol, ul {
 }
 
 .numeric-nav {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   text-align: center;
   li {
     @include inline-block;
     a {
       padding: 8px 12px;
+      @include transition(all 0.2s ease-in-out);
+    }
+    a:hover {
+      background: #f2ddd2;
+    }
+    a:active {
+      background: #f2ddd2;
     }
     span {
       padding: 8px 12px;

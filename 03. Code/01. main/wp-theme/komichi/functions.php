@@ -400,8 +400,8 @@ function numeric_nav( $max_num_pages ) {
     'current'  => $paged,
     'mid_size' => 3,
     'add_args' => array_map( 'urlencode', $query_args ),
-    'prev_text' => __( '&lt;&lt; Prev', 'yourtheme' ),
-    'next_text' => __( 'Next &gt;&gt;', 'yourtheme' ),
+    'prev_text' => __( '&lt;&lt; 前へ', 'yourtheme' ),
+    'next_text' => __( '次へ &gt;&gt;', 'yourtheme' ),
     'type'      => 'list',
   ) );
   if ( $links ) :

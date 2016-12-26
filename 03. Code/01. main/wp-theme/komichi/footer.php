@@ -17,7 +17,7 @@
     </ul>
     <nav role="navigation" class="footer-navigation cf">
       <ol>
-        <li><a href="<?php echo esc_url( home_url() ); ?>" title="TOP">TOP</a></li>
+        <li><a href="<?php echo esc_url( home_url() ); ?>" title="トップ">トップ</a></li>
         <li><a href="/news" title="お知らせ">お知らせ</a></li>
         <li><a href="/books" title="書籍の紹介">書籍の紹介</a></li>
         <li><a href="/bs" title="書店さまへ">書店さまへ</a></li>
