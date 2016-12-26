@@ -20,8 +20,6 @@ article {
 a {
   padding: 5px 0;
   text-decoration: none;
-  &:hover {
-  }
 }
 
 td {
@@ -39,7 +37,7 @@ ol, ul {
 #global-header {
   overflow: hidden;
   position: relative;
-  margin: 0 auto 45px;
+  margin: 0 auto 30px;
   padding: 21px 60px 0;
   width: 1050px;
   h1 {
@@ -71,7 +69,7 @@ ol, ul {
     }
     a {
       display: block;
-      @include transition(all 0.3s ease-in-out);
+      @include transition(all 0.2s ease-in-out);
     }
   } 
 }
@@ -123,17 +121,17 @@ ol, ul {
 
 .section-wrapper {
   width: 1050px;
-  margin: 0 auto 60px;
+  margin: 0 auto 30px;
 }
 
 .metaslider {
-  margin: 0 auto 60px;
+  margin: 0 auto 30px;
 }
 
 // Banner
 
 .banner-wrapper {
-  margin: 0 auto 60px;
+  margin: 0 auto 45px;
   text-align: center;
   li {
     @include inline-block;
@@ -161,7 +159,7 @@ ol, ul {
 %h2-image {
   height: 55px;
   width: 220px;
-  margin: 0 auto 60px;
+  margin: 0 auto 30px;
   text-align: center;
   color: transparent;
 }
@@ -211,17 +209,17 @@ ol, ul {
     margin-bottom: 25px;
   }
   &:nth-child(1) {
-    margin: 0 0 45px;
+    margin: 0 0 30px;
   }
   &:nth-child(2) {
-    margin: 0 45px 45px;
-    margin-right: 45px;
+    margin: 0 45px 30px;
+//    margin-right: 45px;
   }
   &:nth-child(3) {
-    margin: 0 0 45px;
+    margin: 0 0 30px;
   }
   &:nth-child(5) {
-    margin: 0 45px 0;
+    margin: 0 30px 0;
   }
 }
 
@@ -239,6 +237,15 @@ ol, ul {
       bottom: 0;
       right: 0;
     }
+  }
+  p {
+    margin: 0;
+  }
+  figure {
+    display: none;
+  }
+  .more-link {
+    display: none;
   }
 }
 
@@ -263,14 +270,14 @@ ol, ul {
 
 #global-footer {
   width: 100%;
-  padding: 70px 0 0;
-  background: #f2ddd2;
+  padding: 45px 0 0;
+  background: rgb(242,221,210);
 }
 
 .footer-navigation {
   position: relative;
   width: 1050px;
-  margin: 0 auto 60px;
+  margin: 0 auto 45px;
   padding: 0 60px;
   ol {
     float: left;
@@ -314,13 +321,13 @@ ol, ul {
   display: block;
   height: 175px;
   width: 1050px;
-  margin: 0 auto 80px;
+  margin: 0 auto 30px;
   color: transparent;
 }
 
 %section-wrapper-static {  
   width: 730px;
-  margin: 0 auto 160px;
+  margin: 0 auto 80px;
 }
 
 // news.html
@@ -332,7 +339,7 @@ ol, ul {
 
 .news, .editor { // include for editor post type
   width: 930px;
-  margin: 0 auto 80px;
+  margin: 0 auto 30px;
   &:last-child {
     margin-bottom: 80px;
   }
@@ -362,11 +369,14 @@ ol, ul {
   .entry-content {
     float: left;
     width: 520px;
+    max-height: 110px;
+    overflow: hidden;
     p {
-      max-height: 110px;
-      overflow: hidden;
       margin: 0;
       padding: 0;
+    }
+    figure {
+      display: none;
     }
   }
   .post-thumbnail {
@@ -383,10 +393,18 @@ ol, ul {
 
 .news-single {
   position: relative;
-  padding: 70px 175px;
+  padding: 30px 175px;
   border: solid 1px #c9caca;
   .entry-header {
     margin-bottom: 25px;
+  }
+  .entry-content {
+    figure {
+      margin: 0;
+    }
+    figcaption {
+      display: none;
+    }
   }
   .post-thumbnail {
     margin-bottom: 70px;
@@ -421,7 +439,7 @@ ol, ul {
 
 .books {
   width: 930px;
-  margin: 0 auto 80px;
+  margin: 0 auto 30px;
   &:last-child {
     margin-bottom: 80px;
   }
@@ -433,7 +451,7 @@ ol, ul {
 }
 
 .books-nav {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   li {
     margin-right: 5px;
     @include inline-block;
@@ -448,7 +466,7 @@ ol, ul {
       margin-left: 75px;
     }
   }
-  .n01 > .current {
+  .n01 a.current {
     background: url("css/img/books/navi/n01.gif") 0 0 no-repeat;
   }
   .n01 a {
@@ -464,7 +482,7 @@ ol, ul {
       background: url("css/img/books/navi/n01_on.gif") 0 0 no-repeat;
     }
   }
-  .n02 .category-n02 {
+  .n02 a.current {
     background: url("css/img/books/navi/n02.gif") 0 0 no-repeat;
   }
   .n02 a {
@@ -480,7 +498,7 @@ ol, ul {
       background: url("css/img/books/navi/n02_on.gif") 0 0 no-repeat;
     }
   }
-  .n03 .category-n03 {
+  .n03 a.current {
     background: url("css/img/books/navi/n03.gif") 0 0 no-repeat;
   }
   .n03 a {
@@ -496,7 +514,7 @@ ol, ul {
       background: url("css/img/books/navi/n03_on.gif") 0 0 no-repeat;
     }
   }
-  .n04 .category-n04 {
+  .n04 a.current {
     background: url("css/img/books/navi/n04.gif") 0 0 no-repeat;
   }
   .n04 a {
@@ -512,7 +530,7 @@ ol, ul {
       background: url("css/img/books/navi/n04_on.gif") 0 0 no-repeat;
     }
   }
-  .n05 .category-n05 {
+  .n05 a.current {
     background: url("css/img/books/navi/n05.gif") 0 0 no-repeat;
   }
   .n05 a {
@@ -528,7 +546,7 @@ ol, ul {
       background: url("css/img/books/navi/n05_on.gif") 0 0 no-repeat;
     }
   }
-  .n06 .category-n06 {
+  .n06 a.current {
     background: url("css/img/books/navi/n06.gif") 0 0 no-repeat;
   }
   .n06 a {
@@ -544,7 +562,7 @@ ol, ul {
       background: url("css/img/books/navi/n06_on.gif") 0 0 no-repeat;
     }
   }
-  .n07 .category-n07 {
+  .n07 a.current {
     background: url("css/img/books/navi/n07.gif") 0 0 no-repeat;
   }
   .n07 a {
@@ -660,7 +678,7 @@ ol, ul {
 
 .books-single {
   position: relative;
-  padding: 70px 0;
+  padding: 30px 0;
   border: solid 1px #c9caca;
   .post-hide {
     display: none;
@@ -669,20 +687,22 @@ ol, ul {
     text-align: center;
     li {
       @include inline-block;
-      &:last-child {
+      &:nth-child(2) {
         margin-left: 70px;
       }
     }
   }
   .post-thumbnail {
-    margin-bottom: 70px;
+    margin-bottom: 30px;
     img {
       height: 323px;
+      width: auto;
     }
   }
   .entry-subimage {
     height: 323px;
-    margin-bottom: 70px;
+    width: auto;
+    margin-bottom: 30px;
   }
   .entry-title {
     position: relative;
@@ -690,7 +710,7 @@ ol, ul {
     @include inline-block;
   }
   hr {
-    margin: 3em 0;
+    margin: 1em 0;
     border: none;
     border-top: dotted 1px #c9caca;
   }
@@ -827,7 +847,7 @@ ol, ul {
 
 .cp-wrapper {
   padding: 75px 0;
-  border: dotted 1px #333;
+  border: dotted 1px #333333;
   h4 {
     margin-bottom: 35px;
   }
@@ -865,15 +885,16 @@ ol, ul {
   }
 }
 
+// search.php
+
+.search-query {
+  margin: 0;
+}
+
 // elements
 
 .link-more {
-  display: block;
-  text-align: right;
-}
-
-.link-previous {
-  color: #a48878;
+  float: right;
 }
 
 .screen-reader-text {
@@ -881,12 +902,19 @@ ol, ul {
 }
 
 .numeric-nav {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   text-align: center;
   li {
     @include inline-block;
     a {
       padding: 8px 12px;
+      @include transition(all 0.2s ease-in-out);
+    }
+    a:hover {
+      background: #f2ddd2;
+    }
+    a:active {
+      background: #f2ddd2;
     }
     span {
       padding: 8px 12px;

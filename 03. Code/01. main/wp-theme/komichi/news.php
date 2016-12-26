@@ -1,11 +1,5 @@
 <?php
 /**
- * The template for displaying pages
- *
- * This is the template that displays all pages by default.
- * Please note that this is the WordPress construct of pages and that
- * other "pages" on your WordPress site will use a different template.
- *
  * @package WordPress
  * @subpackage Twenty_Fifteen
  * @since Twenty Fifteen 1.0
@@ -14,37 +8,46 @@
 /* Template Name: News */
 
 get_header(); ?>
+  <div id="primary" class="content-area">
+    <main id="main" class="site-main" role="main">
+      <h2 class="banner-news" title="お知らせ">お知らせ</h2>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+      <?php
+//      global $post;
 
-        <?php
-          $args = array(
-            'post_type' => array( 'news', 'editor' ),
-            'paged' => $paged,
-          );
-        ?>
-        <?php query_posts( $args ); ?>
+      // Get page contents
+//      $page_loop = new WP_Query('page_id='.$post->ID);
+//      while ( $page_loop->have_posts() ) : $page_loop->the_post();
+//        the_content();
+//      endwhile;
+//      wp_reset_postdata(); // Clean-up
 
-        <?php $loop = new WP_Query('page_id='.$post->ID); ?>
-        <?php
-          while ( $loop->have_posts() ) : $loop->the_post();
-            the_content();
-          endwhile;
-        ?>
+      // Get specified posts data
+      $args = array(
+        'post_type' => array( 'news', 'editor' ),
+        'paged' => $paged
+      );      
+      $loop = new WP_Query( $args );
+      // Set pages info for pagination
+      $max_num_pages = $loop->max_num_pages;
 
-        <?php numeric_nav();
-		// Start the loop.
-		while ( have_posts() ) : the_post();
+      numeric_nav( $max_num_pages ); // Pagination
 
-			// Include the page content template.
-			get_template_part( 'content', 'news' );
+      while( $loop->have_posts() ) : $loop->the_post();
+        get_template_part( 'content', 'news' );
+      endwhile;
 
-		// End the loop.
-		endwhile;
-		numeric_nav(); ?>
+//      $loop = get_posts( $args );
+//      foreach( $loop as $post ) {
+//        setup_postdata( $post );
+//        get_template_part( 'content', 'news' );
+//      }
+//      wp_reset_postdata();
 
-		</main><!-- .site-main -->
-	</div><!-- .content-area -->
+      numeric_nav( $max_num_pages ); // Pagination
+      wp_reset_postdata(); // Clean-up
+      ?>
 
+    </main><!-- .site-main -->
+  </div><!-- .content-area -->
 <?php get_footer(); ?>

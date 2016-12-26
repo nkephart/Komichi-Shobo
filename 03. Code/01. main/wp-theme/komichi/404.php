@@ -17,6 +17,10 @@ get_header(); ?>
 					<h1 class="page-title"><?php _e( 'Oops! That page can&rsquo;t be found.', 'twentyfifteen' ); ?></h1>
 				</header><!-- .page-header -->
 
+<?php
+var_dump( $wp_query );
+?>
+
 				<div class="page-content">
 					<p><?php _e( 'It looks like nothing was found at this location. Maybe try a search?', 'twentyfifteen' ); ?></p>
 
